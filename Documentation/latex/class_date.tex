@@ -1,0 +1,369 @@
+\hypertarget{class_date}{}\doxysection{Date Class Reference}
+\label{class_date}\index{Date@{Date}}
+
+
+Class for daily obligations.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}{Date}} ()
+\item 
+\mbox{\hyperlink{class_date_aaafe600cb782d74d27d93fcbdaa0ad5b}{Date}} (int, int, int, bool)
+\item 
+\mbox{\hyperlink{class_date_af80a5016fde0d599f0a15900193fc663}{Date}} (int, int, int)
+\item 
+\mbox{\hyperlink{class_date_a521cf49a1242108fb010f77e2a2458fe}{Date}} (const \mbox{\hyperlink{class_date}{Date}} \&other)
+\item 
+\mbox{\hyperlink{class_date}{Date}} \& \mbox{\hyperlink{class_date_afbed03b8e5f81cc205b4b183465e8115}{operator=}} (const \mbox{\hyperlink{class_date}{Date}} \&other)
+\item 
+\mbox{\hyperlink{class_date_ade4b469433b7966cc034cbcc6799233b}{$\sim$\+Date}} ()
+\item 
+void \mbox{\hyperlink{class_date_a0f42c4daef30b047e74c332964e4dac3}{make\+Holiday}} ()
+\item 
+void \mbox{\hyperlink{class_date_a795790fc0cde4220ceaf13b5ce232e4a}{Set\+Year}} (int year)
+\item 
+void \mbox{\hyperlink{class_date_aa7814f6054a688039338ac1190d74a8d}{Set\+Month}} (int month)
+\item 
+void \mbox{\hyperlink{class_date_a7b6f3262997530ea44b84dc1ff818690}{Set\+Day}} (int day)
+\item 
+void \mbox{\hyperlink{class_date_ab2e8d8463bdeb301bd4e62e66fe1b8e8}{Set\+Date}} (int, int, int)
+\item 
+int \mbox{\hyperlink{class_date_ad79ce504482f317ddcfdc4ecad77671f}{Get\+Year}} () const
+\item 
+int \mbox{\hyperlink{class_date_af2dcc6ce51dbb2bd798499a149bdffb7}{Get\+Month}} () const
+\item 
+int \mbox{\hyperlink{class_date_a6304a67f1c13b239eb8e80ad68161e40}{Get\+Day}} () const
+\item 
+bool \mbox{\hyperlink{class_date_a4fb70d3d0a2629cd3eaee05e812d4f01}{Get\+Is\+Workday}} () const
+\item 
+int \mbox{\hyperlink{class_date_a1ff68e87130a1593148e22b248caf476}{Get\+Size}} () const
+\item 
+\mbox{\hyperlink{class_meeting}{Meeting}} \mbox{\hyperlink{class_date_a230f462707d9639bb0939e788587b0ac}{Get\+Meeting\+At}} (int index) const
+\item 
+\mbox{\hyperlink{class_meeting}{Meeting}} \mbox{\hyperlink{class_date_a6cbfa44b61a7f7b84ae803e34e28a4b5}{Pop\+Back}} ()
+\item 
+bool \mbox{\hyperlink{class_date_a84685c65a12f8200bb202d8b64d18376}{add\+Meeting}} (const char $\ast$name, const char $\ast$note, int start\+Hours, int start\+Min, int start\+Sec, int end\+Hours, int end\+Min, int end\+Sec)
+\begin{DoxyCompactList}\small\item\em Functions for adding a new meeting to the array. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_date_af50541ea6e664774cf2ff2ffe128eeb1}{add\+Meeting}} (const char $\ast$name, const char $\ast$note, \mbox{\hyperlink{class_time}{Time}} start, \mbox{\hyperlink{class_time}{Time}} end)
+\item 
+bool \mbox{\hyperlink{class_date_aa6af47e48fd00aedef3afc15dd4113a7}{add\+Meeting}} (const \mbox{\hyperlink{class_meeting}{Meeting}} \&meeting)
+\item 
+void \mbox{\hyperlink{class_date_af48fe2472a02475c55312ad120d6256e}{remove\+Meeting}} (\mbox{\hyperlink{class_time}{Time}} start, \mbox{\hyperlink{class_time}{Time}} end)
+\begin{DoxyCompactList}\small\item\em Functions for removing a meeting from the daily array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_acb62150f9bc66a66bb034f47259427d2}{remove\+Meeting}} (int start\+Hours, int start\+Min, int start\+Sec, int end\+Hours, int end\+Min, int end\+Sec)
+\item 
+void \mbox{\hyperlink{class_date_a0bf0d298e89462ef94b458d7ca19553b}{remove\+Meeting}} (const \mbox{\hyperlink{class_meeting}{Meeting}} \&meet)
+\item 
+void \mbox{\hyperlink{class_date_ae679472b9c2c45635d0dec33454a36b2}{sort\+By\+Time}} ()
+\item 
+\mbox{\hyperlink{class_meeting}{Meeting}} \mbox{\hyperlink{class_date_a838b956a330de28e5281446798c7ea36}{Get\+Meeting}} (const \mbox{\hyperlink{class_time}{Time}} \&start)
+\item 
+bool \mbox{\hyperlink{class_date_a92234bfe91e42fbf2cadf4104c5a1c7f}{Isvalid}} () const
+\item 
+bool \mbox{\hyperlink{class_date_a918d17d5dc577e5d6e865e20e7502d43}{Is\+Free}} (const \mbox{\hyperlink{class_time}{Time}} \&start)
+\item 
+bool \mbox{\hyperlink{class_date_a14866d9342a7cb024b09468f51ce6e3f}{search\+For}} (const char $\ast$ptr)
+\item 
+\mbox{\hyperlink{class_time}{Time}} \& \mbox{\hyperlink{class_date_ad96e64eca393bc50996dbc16b8300ea6}{busyness}} ()
+\item 
+bool \mbox{\hyperlink{class_date_adda599bd6454bdb8a7be73672a07d4f6}{has\+Space}} (const \mbox{\hyperlink{class_time}{Time}} \&needed)
+\item 
+bool \mbox{\hyperlink{class_date_a15a4f7f1448ae79c412fe4ac9110bee2}{has\+Conflict}} (\mbox{\hyperlink{class_date}{Date}} \&other)
+\item 
+void \mbox{\hyperlink{class_date_ae036389190db5072c4d8a3b7f6657b3a}{sort\+By\+Busyness}} ()
+\item 
+void \mbox{\hyperlink{class_date_a6d5873842b1ede5d95399220d7994c7b}{print\+Date}} () const
+\item 
+void \mbox{\hyperlink{class_date_a4e3d9e92e6c0d383e59dda1a1cc7e7a3}{Print\+Daily}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_date_a4e4faf476e7d66ef88aaca8b11a60175}{operator$>$}} (const \mbox{\hyperlink{class_date}{Date}} \&lhs, const \mbox{\hyperlink{class_date}{Date}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Operator for comparison. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_date_a611ba98c72bec2ae82bbf086b81563ef}{operator$<$}} (const \mbox{\hyperlink{class_date}{Date}} \&lhs, const \mbox{\hyperlink{class_date}{Date}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_date_a27425be265a0cc57e4f731825154ec4d}{operator==}} (const \mbox{\hyperlink{class_date}{Date}} \&lhs, const \mbox{\hyperlink{class_date}{Date}} \&rhs)
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_date_a1862604492a841a6b98e1a3061d95b96}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_date}{Date}} \&date)
+\begin{DoxyCompactList}\small\item\em Operators for working with a file. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{class_date_ad38747168f2005159180860e5509b26e}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_date}{Date}} \&date)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for daily obligations. 
+
+Describes the date in yyyy\+:mm\+:dd format and its supporting meetings 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}\label{class_date_a4e59ed4ba66eec61c27460c5d09fa1bd}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_aaafe600cb782d74d27d93fcbdaa0ad5b}\label{class_date_aaafe600cb782d74d27d93fcbdaa0ad5b}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{int}]{year,  }\item[{int}]{month,  }\item[{int}]{day,  }\item[{bool}]{Is\+Workday }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_af80a5016fde0d599f0a15900193fc663}\label{class_date_af80a5016fde0d599f0a15900193fc663}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{int}]{year,  }\item[{int}]{month,  }\item[{int}]{day }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_a521cf49a1242108fb010f77e2a2458fe}\label{class_date_a521cf49a1242108fb010f77e2a2458fe}} 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{Date()}{Date()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_ade4b469433b7966cc034cbcc6799233b}\label{class_date_ade4b469433b7966cc034cbcc6799233b}} 
+\index{Date@{Date}!````~Date@{$\sim$Date}}
+\index{````~Date@{$\sim$Date}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{$\sim$Date()}{~Date()}}
+{\footnotesize\ttfamily Date\+::$\sim$\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_date_a84685c65a12f8200bb202d8b64d18376}\label{class_date_a84685c65a12f8200bb202d8b64d18376}} 
+\index{Date@{Date}!addMeeting@{addMeeting}}
+\index{addMeeting@{addMeeting}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{addMeeting()}{addMeeting()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Date\+::add\+Meeting (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{note,  }\item[{int}]{start\+Hours,  }\item[{int}]{start\+Min,  }\item[{int}]{start\+Sec,  }\item[{int}]{end\+Hours,  }\item[{int}]{end\+Min,  }\item[{int}]{end\+Sec }\end{DoxyParamCaption})}
+
+
+
+Functions for adding a new meeting to the array. 
+
+\mbox{\Hypertarget{class_date_af50541ea6e664774cf2ff2ffe128eeb1}\label{class_date_af50541ea6e664774cf2ff2ffe128eeb1}} 
+\index{Date@{Date}!addMeeting@{addMeeting}}
+\index{addMeeting@{addMeeting}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{addMeeting()}{addMeeting()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Date\+::add\+Meeting (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{note,  }\item[{\mbox{\hyperlink{class_time}{Time}}}]{start,  }\item[{\mbox{\hyperlink{class_time}{Time}}}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_aa6af47e48fd00aedef3afc15dd4113a7}\label{class_date_aa6af47e48fd00aedef3afc15dd4113a7}} 
+\index{Date@{Date}!addMeeting@{addMeeting}}
+\index{addMeeting@{addMeeting}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{addMeeting()}{addMeeting()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Date\+::add\+Meeting (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_meeting}{Meeting}} \&}]{meeting }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_ad96e64eca393bc50996dbc16b8300ea6}\label{class_date_ad96e64eca393bc50996dbc16b8300ea6}} 
+\index{Date@{Date}!busyness@{busyness}}
+\index{busyness@{busyness}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{busyness()}{busyness()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}}\& Date\+::busyness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_a6304a67f1c13b239eb8e80ad68161e40}\label{class_date_a6304a67f1c13b239eb8e80ad68161e40}} 
+\index{Date@{Date}!GetDay@{GetDay}}
+\index{GetDay@{GetDay}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{GetDay()}{GetDay()}}
+{\footnotesize\ttfamily int Date\+::\+Get\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a4fb70d3d0a2629cd3eaee05e812d4f01}\label{class_date_a4fb70d3d0a2629cd3eaee05e812d4f01}} 
+\index{Date@{Date}!GetIsWorkday@{GetIsWorkday}}
+\index{GetIsWorkday@{GetIsWorkday}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{GetIsWorkday()}{GetIsWorkday()}}
+{\footnotesize\ttfamily bool Date\+::\+Get\+Is\+Workday (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a838b956a330de28e5281446798c7ea36}\label{class_date_a838b956a330de28e5281446798c7ea36}} 
+\index{Date@{Date}!GetMeeting@{GetMeeting}}
+\index{GetMeeting@{GetMeeting}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{GetMeeting()}{GetMeeting()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_meeting}{Meeting}} Date\+::\+Get\+Meeting (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_a230f462707d9639bb0939e788587b0ac}\label{class_date_a230f462707d9639bb0939e788587b0ac}} 
+\index{Date@{Date}!GetMeetingAt@{GetMeetingAt}}
+\index{GetMeetingAt@{GetMeetingAt}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{GetMeetingAt()}{GetMeetingAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_meeting}{Meeting}} Date\+::\+Get\+Meeting\+At (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_af2dcc6ce51dbb2bd798499a149bdffb7}\label{class_date_af2dcc6ce51dbb2bd798499a149bdffb7}} 
+\index{Date@{Date}!GetMonth@{GetMonth}}
+\index{GetMonth@{GetMonth}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{GetMonth()}{GetMonth()}}
+{\footnotesize\ttfamily int Date\+::\+Get\+Month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a1ff68e87130a1593148e22b248caf476}\label{class_date_a1ff68e87130a1593148e22b248caf476}} 
+\index{Date@{Date}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily int Date\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_ad79ce504482f317ddcfdc4ecad77671f}\label{class_date_ad79ce504482f317ddcfdc4ecad77671f}} 
+\index{Date@{Date}!GetYear@{GetYear}}
+\index{GetYear@{GetYear}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{GetYear()}{GetYear()}}
+{\footnotesize\ttfamily int Date\+::\+Get\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a15a4f7f1448ae79c412fe4ac9110bee2}\label{class_date_a15a4f7f1448ae79c412fe4ac9110bee2}} 
+\index{Date@{Date}!hasConflict@{hasConflict}}
+\index{hasConflict@{hasConflict}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{hasConflict()}{hasConflict()}}
+{\footnotesize\ttfamily bool Date\+::has\+Conflict (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date}{Date}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_adda599bd6454bdb8a7be73672a07d4f6}\label{class_date_adda599bd6454bdb8a7be73672a07d4f6}} 
+\index{Date@{Date}!hasSpace@{hasSpace}}
+\index{hasSpace@{hasSpace}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{hasSpace()}{hasSpace()}}
+{\footnotesize\ttfamily bool Date\+::has\+Space (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{needed }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_a918d17d5dc577e5d6e865e20e7502d43}\label{class_date_a918d17d5dc577e5d6e865e20e7502d43}} 
+\index{Date@{Date}!IsFree@{IsFree}}
+\index{IsFree@{IsFree}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{IsFree()}{IsFree()}}
+{\footnotesize\ttfamily bool Date\+::\+Is\+Free (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{start }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_a92234bfe91e42fbf2cadf4104c5a1c7f}\label{class_date_a92234bfe91e42fbf2cadf4104c5a1c7f}} 
+\index{Date@{Date}!Isvalid@{Isvalid}}
+\index{Isvalid@{Isvalid}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{Isvalid()}{Isvalid()}}
+{\footnotesize\ttfamily bool Date\+::\+Isvalid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a0f42c4daef30b047e74c332964e4dac3}\label{class_date_a0f42c4daef30b047e74c332964e4dac3}} 
+\index{Date@{Date}!makeHoliday@{makeHoliday}}
+\index{makeHoliday@{makeHoliday}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{makeHoliday()}{makeHoliday()}}
+{\footnotesize\ttfamily void Date\+::make\+Holiday (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_afbed03b8e5f81cc205b4b183465e8115}\label{class_date_afbed03b8e5f81cc205b4b183465e8115}} 
+\index{Date@{Date}!operator=@{operator=}}
+\index{operator=@{operator=}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} \& Date\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_a6cbfa44b61a7f7b84ae803e34e28a4b5}\label{class_date_a6cbfa44b61a7f7b84ae803e34e28a4b5}} 
+\index{Date@{Date}!PopBack@{PopBack}}
+\index{PopBack@{PopBack}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{PopBack()}{PopBack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_meeting}{Meeting}} Date\+::\+Pop\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_a4e3d9e92e6c0d383e59dda1a1cc7e7a3}\label{class_date_a4e3d9e92e6c0d383e59dda1a1cc7e7a3}} 
+\index{Date@{Date}!PrintDaily@{PrintDaily}}
+\index{PrintDaily@{PrintDaily}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{PrintDaily()}{PrintDaily()}}
+{\footnotesize\ttfamily void Date\+::\+Print\+Daily (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a6d5873842b1ede5d95399220d7994c7b}\label{class_date_a6d5873842b1ede5d95399220d7994c7b}} 
+\index{Date@{Date}!printDate@{printDate}}
+\index{printDate@{printDate}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{printDate()}{printDate()}}
+{\footnotesize\ttfamily void Date\+::print\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_date_a0bf0d298e89462ef94b458d7ca19553b}\label{class_date_a0bf0d298e89462ef94b458d7ca19553b}} 
+\index{Date@{Date}!removeMeeting@{removeMeeting}}
+\index{removeMeeting@{removeMeeting}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{removeMeeting()}{removeMeeting()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Date\+::remove\+Meeting (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_meeting}{Meeting}} \&}]{meet }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_acb62150f9bc66a66bb034f47259427d2}\label{class_date_acb62150f9bc66a66bb034f47259427d2}} 
+\index{Date@{Date}!removeMeeting@{removeMeeting}}
+\index{removeMeeting@{removeMeeting}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{removeMeeting()}{removeMeeting()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Date\+::remove\+Meeting (\begin{DoxyParamCaption}\item[{int}]{start\+Hours,  }\item[{int}]{start\+Min,  }\item[{int}]{start\+Sec,  }\item[{int}]{end\+Hours,  }\item[{int}]{end\+Min,  }\item[{int}]{end\+Sec }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_af48fe2472a02475c55312ad120d6256e}\label{class_date_af48fe2472a02475c55312ad120d6256e}} 
+\index{Date@{Date}!removeMeeting@{removeMeeting}}
+\index{removeMeeting@{removeMeeting}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{removeMeeting()}{removeMeeting()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Date\+::remove\+Meeting (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_time}{Time}}}]{start,  }\item[{\mbox{\hyperlink{class_time}{Time}}}]{end }\end{DoxyParamCaption})}
+
+
+
+Functions for removing a meeting from the daily array. 
+
+\mbox{\Hypertarget{class_date_a14866d9342a7cb024b09468f51ce6e3f}\label{class_date_a14866d9342a7cb024b09468f51ce6e3f}} 
+\index{Date@{Date}!searchFor@{searchFor}}
+\index{searchFor@{searchFor}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{searchFor()}{searchFor()}}
+{\footnotesize\ttfamily bool Date\+::search\+For (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_ab2e8d8463bdeb301bd4e62e66fe1b8e8}\label{class_date_ab2e8d8463bdeb301bd4e62e66fe1b8e8}} 
+\index{Date@{Date}!SetDate@{SetDate}}
+\index{SetDate@{SetDate}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{SetDate()}{SetDate()}}
+{\footnotesize\ttfamily void Date\+::\+Set\+Date (\begin{DoxyParamCaption}\item[{int}]{year,  }\item[{int}]{month,  }\item[{int}]{day }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_a7b6f3262997530ea44b84dc1ff818690}\label{class_date_a7b6f3262997530ea44b84dc1ff818690}} 
+\index{Date@{Date}!SetDay@{SetDay}}
+\index{SetDay@{SetDay}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{SetDay()}{SetDay()}}
+{\footnotesize\ttfamily void Date\+::\+Set\+Day (\begin{DoxyParamCaption}\item[{int}]{day }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_aa7814f6054a688039338ac1190d74a8d}\label{class_date_aa7814f6054a688039338ac1190d74a8d}} 
+\index{Date@{Date}!SetMonth@{SetMonth}}
+\index{SetMonth@{SetMonth}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{SetMonth()}{SetMonth()}}
+{\footnotesize\ttfamily void Date\+::\+Set\+Month (\begin{DoxyParamCaption}\item[{int}]{month }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_a795790fc0cde4220ceaf13b5ce232e4a}\label{class_date_a795790fc0cde4220ceaf13b5ce232e4a}} 
+\index{Date@{Date}!SetYear@{SetYear}}
+\index{SetYear@{SetYear}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{SetYear()}{SetYear()}}
+{\footnotesize\ttfamily void Date\+::\+Set\+Year (\begin{DoxyParamCaption}\item[{int}]{year }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_ae036389190db5072c4d8a3b7f6657b3a}\label{class_date_ae036389190db5072c4d8a3b7f6657b3a}} 
+\index{Date@{Date}!sortByBusyness@{sortByBusyness}}
+\index{sortByBusyness@{sortByBusyness}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{sortByBusyness()}{sortByBusyness()}}
+{\footnotesize\ttfamily void Date\+::sort\+By\+Busyness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_date_ae679472b9c2c45635d0dec33454a36b2}\label{class_date_ae679472b9c2c45635d0dec33454a36b2}} 
+\index{Date@{Date}!sortByTime@{sortByTime}}
+\index{sortByTime@{sortByTime}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{sortByTime()}{sortByTime()}}
+{\footnotesize\ttfamily void Date\+::sort\+By\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_date_a611ba98c72bec2ae82bbf086b81563ef}\label{class_date_a611ba98c72bec2ae82bbf086b81563ef}} 
+\index{Date@{Date}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_date_a1862604492a841a6b98e1a3061d95b96}\label{class_date_a1862604492a841a6b98e1a3061d95b96}} 
+\index{Date@{Date}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operators for working with a file. 
+
+\mbox{\Hypertarget{class_date_a27425be265a0cc57e4f731825154ec4d}\label{class_date_a27425be265a0cc57e4f731825154ec4d}} 
+\index{Date@{Date}!operator==@{operator==}}
+\index{operator==@{operator==}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_date_a4e4faf476e7d66ef88aaca8b11a60175}\label{class_date_a4e4faf476e7d66ef88aaca8b11a60175}} 
+\index{Date@{Date}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operator for comparison. 
+
+\mbox{\Hypertarget{class_date_ad38747168f2005159180860e5509b26e}\label{class_date_ad38747168f2005159180860e5509b26e}} 
+\index{Date@{Date}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\mbox{\hyperlink{_date_8hpp}{Date.\+hpp}}\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\mbox{\hyperlink{_date_8cpp}{Date.\+cpp}}\end{DoxyCompactItemize}

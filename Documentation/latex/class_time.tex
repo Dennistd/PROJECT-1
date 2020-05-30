@@ -1,0 +1,189 @@
+\hypertarget{class_time}{}\doxysection{Time Class Reference}
+\label{class_time}\index{Time@{Time}}
+
+
+Class for time.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_time_afa9dad5150a721be736db0e04666db61}{Time}} (int hours=0, int minutes=0, int seconds=0)
+\begin{DoxyCompactList}\small\item\em Constructor with parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_time_aff473ad31e4eb2a37127d2603f22ada3}{Set\+Hours}} (int)
+\item 
+void \mbox{\hyperlink{class_time_ae7473417bfa0e3942bdd43c011fb421f}{Set\+Minutes}} (int)
+\item 
+void \mbox{\hyperlink{class_time_a5666a7c06f2f7da3bdbe0b3c4ce585b4}{Set\+Seconds}} (int)
+\item 
+int \mbox{\hyperlink{class_time_a508c3a20933ad90eb9ba0339c51d949d}{Get\+Hours}} () const
+\item 
+int \mbox{\hyperlink{class_time_a776335efdef4b465085442f046699b38}{Get\+Minutes}} () const
+\item 
+int \mbox{\hyperlink{class_time_af0d67cb8f6c3b9122880aff691a8aefd}{Get\+Seconds}} () const
+\item 
+void \mbox{\hyperlink{class_time_affe951ed7db1d46eb20c39ee2d8c1d15}{print\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Prints the time in a formated way. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_time}{Time}} \& \mbox{\hyperlink{class_time_ad71b28abe6b00c8c1587e94ec945bbb8}{operator-\/=}} (const \mbox{\hyperlink{class_time}{Time}} \&other)
+\item 
+\mbox{\hyperlink{class_time}{Time}} \& \mbox{\hyperlink{class_time_a8b4dbd2773e42130e0d1cf5eeca6f6d7}{operator+=}} (const \mbox{\hyperlink{class_time}{Time}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{class_time_a92002794cd665e492e4505d91a297bac}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{class_time}{Time}} \&time)
+\begin{DoxyCompactList}\small\item\em operators for working with files \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{class_time_aa153c7e397eda8644c840a97f6036c5b}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_time}{Time}} \&time)
+\item 
+bool \mbox{\hyperlink{class_time_a6b159917b40f8b6f167d401b31cfc256}{operator==}} (const \mbox{\hyperlink{class_time}{Time}} \&lhs, const \mbox{\hyperlink{class_time}{Time}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Operators for comparing times. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_time_addcc2fb274ebc2172b8423213c9e6570}{operator$>$}} (const \mbox{\hyperlink{class_time}{Time}} \&lhs, const \mbox{\hyperlink{class_time}{Time}} \&rhs)
+\item 
+bool \mbox{\hyperlink{class_time_ab1ed2ae785e0885a6b8a2541808e7a28}{operator$<$}} (const \mbox{\hyperlink{class_time}{Time}} \&lhs, const \mbox{\hyperlink{class_time}{Time}} \&rhs)
+\item 
+\mbox{\hyperlink{class_time}{Time}} \& \mbox{\hyperlink{class_time_af2dc20df0f268f1d73e4a7a719751de0}{operator-\/}} (const \mbox{\hyperlink{class_time}{Time}} \&lhs, const \mbox{\hyperlink{class_time}{Time}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Operators for addition and subtraction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_time}{Time}} \& \mbox{\hyperlink{class_time_ae072e3aaeb54ffdcbc5b7ed85f58e4dc}{operator+}} (const \mbox{\hyperlink{class_time}{Time}} \&lhs, const \mbox{\hyperlink{class_time}{Time}} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for time. 
+
+In format hh\+:mm\+:ss 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_time_afa9dad5150a721be736db0e04666db61}\label{class_time_afa9dad5150a721be736db0e04666db61}} 
+\index{Time@{Time}!Time@{Time}}
+\index{Time@{Time}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{Time()}{Time()}}
+{\footnotesize\ttfamily Time\+::\+Time (\begin{DoxyParamCaption}\item[{int}]{hours = {\ttfamily 0},  }\item[{int}]{minutes = {\ttfamily 0},  }\item[{int}]{seconds = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor with parameters. 
+
+that sets the default values 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_time_a508c3a20933ad90eb9ba0339c51d949d}\label{class_time_a508c3a20933ad90eb9ba0339c51d949d}} 
+\index{Time@{Time}!GetHours@{GetHours}}
+\index{GetHours@{GetHours}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{GetHours()}{GetHours()}}
+{\footnotesize\ttfamily int Time\+::\+Get\+Hours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_time_a776335efdef4b465085442f046699b38}\label{class_time_a776335efdef4b465085442f046699b38}} 
+\index{Time@{Time}!GetMinutes@{GetMinutes}}
+\index{GetMinutes@{GetMinutes}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{GetMinutes()}{GetMinutes()}}
+{\footnotesize\ttfamily int Time\+::\+Get\+Minutes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_time_af0d67cb8f6c3b9122880aff691a8aefd}\label{class_time_af0d67cb8f6c3b9122880aff691a8aefd}} 
+\index{Time@{Time}!GetSeconds@{GetSeconds}}
+\index{GetSeconds@{GetSeconds}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{GetSeconds()}{GetSeconds()}}
+{\footnotesize\ttfamily int Time\+::\+Get\+Seconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_time_a8b4dbd2773e42130e0d1cf5eeca6f6d7}\label{class_time_a8b4dbd2773e42130e0d1cf5eeca6f6d7}} 
+\index{Time@{Time}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}} \& Time\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_time_ad71b28abe6b00c8c1587e94ec945bbb8}\label{class_time_ad71b28abe6b00c8c1587e94ec945bbb8}} 
+\index{Time@{Time}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}} \& Time\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_time_affe951ed7db1d46eb20c39ee2d8c1d15}\label{class_time_affe951ed7db1d46eb20c39ee2d8c1d15}} 
+\index{Time@{Time}!printTime@{printTime}}
+\index{printTime@{printTime}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{printTime()}{printTime()}}
+{\footnotesize\ttfamily void Time\+::print\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Prints the time in a formated way. 
+
+\mbox{\Hypertarget{class_time_aff473ad31e4eb2a37127d2603f22ada3}\label{class_time_aff473ad31e4eb2a37127d2603f22ada3}} 
+\index{Time@{Time}!SetHours@{SetHours}}
+\index{SetHours@{SetHours}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{SetHours()}{SetHours()}}
+{\footnotesize\ttfamily void Time\+::\+Set\+Hours (\begin{DoxyParamCaption}\item[{int}]{hours }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_time_ae7473417bfa0e3942bdd43c011fb421f}\label{class_time_ae7473417bfa0e3942bdd43c011fb421f}} 
+\index{Time@{Time}!SetMinutes@{SetMinutes}}
+\index{SetMinutes@{SetMinutes}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{SetMinutes()}{SetMinutes()}}
+{\footnotesize\ttfamily void Time\+::\+Set\+Minutes (\begin{DoxyParamCaption}\item[{int}]{minutes }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_time_a5666a7c06f2f7da3bdbe0b3c4ce585b4}\label{class_time_a5666a7c06f2f7da3bdbe0b3c4ce585b4}} 
+\index{Time@{Time}!SetSeconds@{SetSeconds}}
+\index{SetSeconds@{SetSeconds}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{SetSeconds()}{SetSeconds()}}
+{\footnotesize\ttfamily void Time\+::\+Set\+Seconds (\begin{DoxyParamCaption}\item[{int}]{seconds }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_time_ae072e3aaeb54ffdcbc5b7ed85f58e4dc}\label{class_time_ae072e3aaeb54ffdcbc5b7ed85f58e4dc}} 
+\index{Time@{Time}!operator+@{operator+}}
+\index{operator+@{operator+}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}}\& operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_time_af2dc20df0f268f1d73e4a7a719751de0}\label{class_time_af2dc20df0f268f1d73e4a7a719751de0}} 
+\index{Time@{Time}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator-\/}{operator-}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}}\& operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operators for addition and subtraction. 
+
+\mbox{\Hypertarget{class_time_ab1ed2ae785e0885a6b8a2541808e7a28}\label{class_time_ab1ed2ae785e0885a6b8a2541808e7a28}} 
+\index{Time@{Time}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_time_aa153c7e397eda8644c840a97f6036c5b}\label{class_time_aa153c7e397eda8644c840a97f6036c5b}} 
+\index{Time@{Time}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_time_a6b159917b40f8b6f167d401b31cfc256}\label{class_time_a6b159917b40f8b6f167d401b31cfc256}} 
+\index{Time@{Time}!operator==@{operator==}}
+\index{operator==@{operator==}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operators for comparing times. 
+
+\mbox{\Hypertarget{class_time_addcc2fb274ebc2172b8423213c9e6570}\label{class_time_addcc2fb274ebc2172b8423213c9e6570}} 
+\index{Time@{Time}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_time_a92002794cd665e492e4505d91a297bac}\label{class_time_a92002794cd665e492e4505d91a297bac}} 
+\index{Time@{Time}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_time}{Time}} \&}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+operators for working with files 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\mbox{\hyperlink{_time_8hpp}{Time.\+hpp}}\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\mbox{\hyperlink{_time_8cpp}{Time.\+cpp}}\end{DoxyCompactItemize}

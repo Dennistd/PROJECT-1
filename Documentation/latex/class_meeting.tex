@@ -1,0 +1,225 @@
+\hypertarget{class_meeting}{}\doxysection{Meeting Class Reference}
+\label{class_meeting}\index{Meeting@{Meeting}}
+
+
+Class for meeting.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_meeting_a6b300316120aa287400af34bcad1781b}{Meeting}} ()
+\item 
+\mbox{\hyperlink{class_meeting_a0c12b261cad7a4f7a2b772d862541155}{Meeting}} (const char $\ast$name, const char $\ast$note, const \mbox{\hyperlink{class_time}{Time}} \&start, const \mbox{\hyperlink{class_time}{Time}} \&finish)
+\item 
+\mbox{\hyperlink{class_meeting_ad43ebf2b068e3bf3541f3048afe8f866}{Meeting}} (const char $\ast$name, const char $\ast$note, int Start\+Hours, int Start\+Minutes, int Start\+Seconds, int Finish\+Hours, int Finish\+Minutes, int Finish\+Seconds)
+\item 
+\mbox{\hyperlink{class_meeting_a25d1c68626937ed29905f75fa0e1c6ff}{Meeting}} (const \mbox{\hyperlink{class_meeting}{Meeting}} \&other)
+\item 
+\mbox{\hyperlink{class_meeting}{Meeting}} \& \mbox{\hyperlink{class_meeting_a26f595b5e2ab994db52541210d69a948}{operator=}} (const \mbox{\hyperlink{class_meeting}{Meeting}} \&other)
+\item 
+\mbox{\hyperlink{class_meeting_aee544738c7584331ceed39e6bc1a9a1a}{$\sim$\+Meeting}} ()
+\item 
+const char $\ast$ \mbox{\hyperlink{class_meeting_a42753c9be88a754b70ab1ddb468fbf64}{Get\+Name}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{class_meeting_aa05bb9745d46879bb285d9a40828eac1}{Get\+Note}} () const
+\item 
+const \mbox{\hyperlink{class_time}{Time}} \& \mbox{\hyperlink{class_meeting_ad4149e1d391e57312a2720746e3b94a1}{Get\+Start}} () const
+\item 
+const \mbox{\hyperlink{class_time}{Time}} \& \mbox{\hyperlink{class_meeting_ae94d51dd7039238ab81d039959162139}{Get\+Finish}} () const
+\item 
+const \mbox{\hyperlink{class_time}{Time}} \& \mbox{\hyperlink{class_meeting_ae542e634545ed649311f1713565703d0}{Get\+Duration}} () const
+\item 
+void \mbox{\hyperlink{class_meeting_afb4597796298dea9e95cfcbde8e32bef}{Set\+Name}} (const char $\ast$name)
+\item 
+void \mbox{\hyperlink{class_meeting_a3693ebbf96c904d0db5924ab0efe3b2c}{Set\+Note}} (const char $\ast$note)
+\item 
+void \mbox{\hyperlink{class_meeting_aa8388b45ebb3068d8ce51e8db029dcaf}{Set\+Start}} (const \mbox{\hyperlink{class_time}{Time}} \&start)
+\item 
+void \mbox{\hyperlink{class_meeting_a37a3753d64bfdd3b46aecb5a63c4db9e}{Set\+Finish}} (const \mbox{\hyperlink{class_time}{Time}} \&end)
+\item 
+void \mbox{\hyperlink{class_meeting_a274b751dad3b359163c8f4ac0bf92da2}{Set\+Period}} (const \mbox{\hyperlink{class_time}{Time}} \&start, const \mbox{\hyperlink{class_time}{Time}} \&end)
+\item 
+bool \mbox{\hyperlink{class_meeting_a560a22394c19d9ce14eab8782b1bfc9e}{Is\+Valid}} ()
+\item 
+\mbox{\hyperlink{class_time}{Time}} \& \mbox{\hyperlink{class_meeting_aa00061b1e53576a71529cabb1109ceb2}{Get\+Dur}} () const
+\item 
+bool \mbox{\hyperlink{class_meeting_aad82bfb7f87506fa68694214cb2d5f04}{has\+Conflict}} (const \mbox{\hyperlink{class_meeting}{Meeting}} \&other)
+\item 
+void \mbox{\hyperlink{class_meeting_a1b53a66108fccadc1b3512d318a2bdf2}{print\+Meeting}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_meeting_a4750e7e2ade4f0f5c61467fac021dbd9}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_meeting}{Meeting}} \&meet)
+\begin{DoxyCompactList}\small\item\em Operators for working with a file. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{class_meeting_a7d50d04687577ac7c5dbe2eb81dad224}{operator$>$$>$}} (std\+::ostream \&is, \mbox{\hyperlink{class_meeting}{Meeting}} \&meet)
+\item 
+bool \mbox{\hyperlink{class_meeting_ac944d086475cfd53ed2b1d6cfdd9d1f0}{operator==}} (const \mbox{\hyperlink{class_meeting}{Meeting}} \&lhs, const \mbox{\hyperlink{class_meeting}{Meeting}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Operator which checks if the meetings are identical. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for meeting. 
+
+The daily calendar will be working with these meetings 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_meeting_a6b300316120aa287400af34bcad1781b}\label{class_meeting_a6b300316120aa287400af34bcad1781b}} 
+\index{Meeting@{Meeting}!Meeting@{Meeting}}
+\index{Meeting@{Meeting}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{Meeting()}{Meeting()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Meeting\+::\+Meeting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_meeting_a0c12b261cad7a4f7a2b772d862541155}\label{class_meeting_a0c12b261cad7a4f7a2b772d862541155}} 
+\index{Meeting@{Meeting}!Meeting@{Meeting}}
+\index{Meeting@{Meeting}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{Meeting()}{Meeting()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Meeting\+::\+Meeting (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{note,  }\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{start,  }\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{finish }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_meeting_ad43ebf2b068e3bf3541f3048afe8f866}\label{class_meeting_ad43ebf2b068e3bf3541f3048afe8f866}} 
+\index{Meeting@{Meeting}!Meeting@{Meeting}}
+\index{Meeting@{Meeting}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{Meeting()}{Meeting()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Meeting\+::\+Meeting (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{note,  }\item[{int}]{Start\+Hours,  }\item[{int}]{Start\+Minutes,  }\item[{int}]{Start\+Seconds,  }\item[{int}]{Finish\+Hours,  }\item[{int}]{Finish\+Minutes,  }\item[{int}]{Finish\+Seconds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_meeting_a25d1c68626937ed29905f75fa0e1c6ff}\label{class_meeting_a25d1c68626937ed29905f75fa0e1c6ff}} 
+\index{Meeting@{Meeting}!Meeting@{Meeting}}
+\index{Meeting@{Meeting}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{Meeting()}{Meeting()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Meeting\+::\+Meeting (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_meeting}{Meeting}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_meeting_aee544738c7584331ceed39e6bc1a9a1a}\label{class_meeting_aee544738c7584331ceed39e6bc1a9a1a}} 
+\index{Meeting@{Meeting}!````~Meeting@{$\sim$Meeting}}
+\index{````~Meeting@{$\sim$Meeting}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{$\sim$Meeting()}{~Meeting()}}
+{\footnotesize\ttfamily Meeting\+::$\sim$\+Meeting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_meeting_aa00061b1e53576a71529cabb1109ceb2}\label{class_meeting_aa00061b1e53576a71529cabb1109ceb2}} 
+\index{Meeting@{Meeting}!GetDur@{GetDur}}
+\index{GetDur@{GetDur}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{GetDur()}{GetDur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}} \& Meeting\+::\+Get\+Dur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_meeting_ae542e634545ed649311f1713565703d0}\label{class_meeting_ae542e634545ed649311f1713565703d0}} 
+\index{Meeting@{Meeting}!GetDuration@{GetDuration}}
+\index{GetDuration@{GetDuration}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{GetDuration()}{GetDuration()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_time}{Time}} \& Meeting\+::\+Get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_meeting_ae94d51dd7039238ab81d039959162139}\label{class_meeting_ae94d51dd7039238ab81d039959162139}} 
+\index{Meeting@{Meeting}!GetFinish@{GetFinish}}
+\index{GetFinish@{GetFinish}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{GetFinish()}{GetFinish()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_time}{Time}} \& Meeting\+::\+Get\+Finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_meeting_a42753c9be88a754b70ab1ddb468fbf64}\label{class_meeting_a42753c9be88a754b70ab1ddb468fbf64}} 
+\index{Meeting@{Meeting}!GetName@{GetName}}
+\index{GetName@{GetName}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily const char $\ast$ Meeting\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_meeting_aa05bb9745d46879bb285d9a40828eac1}\label{class_meeting_aa05bb9745d46879bb285d9a40828eac1}} 
+\index{Meeting@{Meeting}!GetNote@{GetNote}}
+\index{GetNote@{GetNote}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{GetNote()}{GetNote()}}
+{\footnotesize\ttfamily const char $\ast$ Meeting\+::\+Get\+Note (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_meeting_ad4149e1d391e57312a2720746e3b94a1}\label{class_meeting_ad4149e1d391e57312a2720746e3b94a1}} 
+\index{Meeting@{Meeting}!GetStart@{GetStart}}
+\index{GetStart@{GetStart}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{GetStart()}{GetStart()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_time}{Time}} \& Meeting\+::\+Get\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_meeting_aad82bfb7f87506fa68694214cb2d5f04}\label{class_meeting_aad82bfb7f87506fa68694214cb2d5f04}} 
+\index{Meeting@{Meeting}!hasConflict@{hasConflict}}
+\index{hasConflict@{hasConflict}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{hasConflict()}{hasConflict()}}
+{\footnotesize\ttfamily bool Meeting\+::has\+Conflict (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_meeting}{Meeting}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_meeting_a560a22394c19d9ce14eab8782b1bfc9e}\label{class_meeting_a560a22394c19d9ce14eab8782b1bfc9e}} 
+\index{Meeting@{Meeting}!IsValid@{IsValid}}
+\index{IsValid@{IsValid}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{IsValid()}{IsValid()}}
+{\footnotesize\ttfamily bool Meeting\+::\+Is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_meeting_a26f595b5e2ab994db52541210d69a948}\label{class_meeting_a26f595b5e2ab994db52541210d69a948}} 
+\index{Meeting@{Meeting}!operator=@{operator=}}
+\index{operator=@{operator=}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_meeting}{Meeting}} \& Meeting\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_meeting}{Meeting}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_meeting_a1b53a66108fccadc1b3512d318a2bdf2}\label{class_meeting_a1b53a66108fccadc1b3512d318a2bdf2}} 
+\index{Meeting@{Meeting}!printMeeting@{printMeeting}}
+\index{printMeeting@{printMeeting}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{printMeeting()}{printMeeting()}}
+{\footnotesize\ttfamily void Meeting\+::print\+Meeting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_meeting_a37a3753d64bfdd3b46aecb5a63c4db9e}\label{class_meeting_a37a3753d64bfdd3b46aecb5a63c4db9e}} 
+\index{Meeting@{Meeting}!SetFinish@{SetFinish}}
+\index{SetFinish@{SetFinish}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{SetFinish()}{SetFinish()}}
+{\footnotesize\ttfamily void Meeting\+::\+Set\+Finish (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_meeting_afb4597796298dea9e95cfcbde8e32bef}\label{class_meeting_afb4597796298dea9e95cfcbde8e32bef}} 
+\index{Meeting@{Meeting}!SetName@{SetName}}
+\index{SetName@{SetName}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{SetName()}{SetName()}}
+{\footnotesize\ttfamily void Meeting\+::\+Set\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_meeting_a3693ebbf96c904d0db5924ab0efe3b2c}\label{class_meeting_a3693ebbf96c904d0db5924ab0efe3b2c}} 
+\index{Meeting@{Meeting}!SetNote@{SetNote}}
+\index{SetNote@{SetNote}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{SetNote()}{SetNote()}}
+{\footnotesize\ttfamily void Meeting\+::\+Set\+Note (\begin{DoxyParamCaption}\item[{const char $\ast$}]{note }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_meeting_a274b751dad3b359163c8f4ac0bf92da2}\label{class_meeting_a274b751dad3b359163c8f4ac0bf92da2}} 
+\index{Meeting@{Meeting}!SetPeriod@{SetPeriod}}
+\index{SetPeriod@{SetPeriod}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{SetPeriod()}{SetPeriod()}}
+{\footnotesize\ttfamily void Meeting\+::\+Set\+Period (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{start,  }\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_meeting_aa8388b45ebb3068d8ce51e8db029dcaf}\label{class_meeting_aa8388b45ebb3068d8ce51e8db029dcaf}} 
+\index{Meeting@{Meeting}!SetStart@{SetStart}}
+\index{SetStart@{SetStart}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{SetStart()}{SetStart()}}
+{\footnotesize\ttfamily void Meeting\+::\+Set\+Start (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{start }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_meeting_a4750e7e2ade4f0f5c61467fac021dbd9}\label{class_meeting_a4750e7e2ade4f0f5c61467fac021dbd9}} 
+\index{Meeting@{Meeting}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_meeting}{Meeting}} \&}]{meet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operators for working with a file. 
+
+\mbox{\Hypertarget{class_meeting_ac944d086475cfd53ed2b1d6cfdd9d1f0}\label{class_meeting_ac944d086475cfd53ed2b1d6cfdd9d1f0}} 
+\index{Meeting@{Meeting}!operator==@{operator==}}
+\index{operator==@{operator==}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_meeting}{Meeting}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_meeting}{Meeting}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operator which checks if the meetings are identical. 
+
+\mbox{\Hypertarget{class_meeting_a7d50d04687577ac7c5dbe2eb81dad224}\label{class_meeting_a7d50d04687577ac7c5dbe2eb81dad224}} 
+\index{Meeting@{Meeting}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Meeting@{Meeting}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{is,  }\item[{\mbox{\hyperlink{class_meeting}{Meeting}} \&}]{meet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\mbox{\hyperlink{_meeting_8hpp}{Meeting.\+hpp}}\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\mbox{\hyperlink{_meeting_8cpp}{Meeting.\+cpp}}\end{DoxyCompactItemize}
