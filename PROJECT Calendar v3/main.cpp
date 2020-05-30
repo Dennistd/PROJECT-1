@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
     
     Meeting work("Working","Hard",9,30,0,14,30,0);
     tomorrow.addMeeting(work);
-    today.addMeeting("Finish the project", "It is due today", 23, 0, 0, 0, 0, 0);
+    today.addMeeting("Finish the project", "It is due today", 20, 0, 0, 21, 0, 0);
     personalCal.addDate(today);
     personalCal.addDate(tomorrow);
     personalCal.print();

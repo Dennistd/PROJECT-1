@@ -17,6 +17,7 @@ void Meeting:: CopyFrom(const Meeting& other){
     // this->lenName=strlen(other.name);
     this->SetNote(other.note);
     // this->lenNote=strlen(other.note);
+    
     this->SetStart(other.start);
     this->SetFinish(other.finish);
 }
@@ -106,19 +107,19 @@ void Meeting:: SetNote(const char* note){
     
 }
 void Meeting:: SetStart(const Time& start){
-    if(start <= this->finish){
+    if(start < this->finish){
         this->start=start;
     }
     else{
-        std::cout<<"Enter a valid start time, before the end"<<std::endl;
+        throw "Enter a valid start time, before the end";
     }
 }
 void Meeting:: SetFinish(const Time& end){
-    if(finish>=this->start){
+    if(finish>this->start){
         this->finish=end;
     }
     else{
-        std::cout<<"Enter a valid end time, after the start"<<std::endl;
+        throw "Enter a valid end time, after the start";
     }
 }
 

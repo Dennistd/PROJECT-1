@@ -249,7 +249,9 @@ bool Date:: addMeeting(const Meeting& meeting){
     }
     
     if(IsWorkday){
-       this->schedule[this->size++]=meeting;
+       this->schedule[size]=meeting;
+        this->size++;
+        return true;
     }
     return false;
 }
