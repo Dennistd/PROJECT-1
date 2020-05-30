@@ -334,9 +334,9 @@ void Test:: FileCommand(){
             char innerCommand[COMMAND_MAX_SIZE];
             std::cin>>innerCommand;
             
-            // think twice
+           
             SetCommand(innerCommand);
-            while((strcmp(innerCommand, "save")==0)||(strcmp(innerCommand, "saveas")==0)||(strcmp(innerCommand, "close")==0)){
+            while((strcmp(innerCommand, "save")==0)&&(strcmp(innerCommand, "saveas")==0)&&(strcmp(innerCommand, "close")==0)){
                 
                 Command();
                 std::cin>>innerCommand;
