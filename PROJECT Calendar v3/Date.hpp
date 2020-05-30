@@ -101,6 +101,7 @@ public:
 
     void sortByBusyness(); //sort by bussyness
     void printDate()const; //fix 0s
+    void PrintDaily()const;
     
     ///Operator for comparison
     friend bool operator>(const Date& lhs,const Date& rhs);

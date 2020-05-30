@@ -76,5 +76,7 @@ public:
     
     friend std::ostream& operator<<(std::ostream& os,Calendar& c);
     friend std::istream& operator>>(std::istream& is,Calendar& c);
+    
+    void print()const;// for testing
 };
 #endif /* Calendar_hpp */

@@ -127,6 +127,7 @@ Date::Date(int year,int month,int day,bool IsWorkday){
     SetDay(day);
            SetMonth(month);
            SetYear(year);
+    this->IsWorkday=IsWorkday;
     
     if(IsWorkday){
         
@@ -134,7 +135,6 @@ Date::Date(int year,int month,int day,bool IsWorkday){
     size=0;
     capacity=DEFAULT_SIZE;
         this->schedule=new Meeting[capacity];
-        
     }
     else{
         size=capacity=0;
@@ -147,6 +147,7 @@ Date:: Date(int year ,int month,int day){
     SetYear(year);
     SetMonth(month);
     SetDay(day);
+    this->IsWorkday=true;
     
     size=0;
     capacity=DEFAULT_SIZE;
@@ -382,6 +383,14 @@ void Date:: printDate()const{
     }
     std::cout<<std::endl;
 }
+void Date:: PrintDaily()const{
+    printDate();
+    if(GetIsWorkday()){
+        for(int i=0;i<GetSize();i++){
+            schedule[i].printMeeting();
+        }
+    }
+}
 bool operator>(const Date& lhs,const Date& rhs){
     if(lhs.GetYear()>rhs.GetYear())
            return true;
@@ -442,9 +451,15 @@ std::istream& operator>>(std::istream& is,Date& date){
     date.SetDay(newDay);
     if(date.GetIsWorkday()){
         for(int i=0;i<date.GetSize();i++){
-            Meeting meet;
-            is >> meet;
-            date.addMeeting(meet);
+            char name[1024];
+            is>>name;
+            char note[1024];
+            is>>note;
+            Time start;
+            is>>start;
+            Time end;
+            is>>end;
+            date.addMeeting(name, note, start, end);
         }
     }
     return is;

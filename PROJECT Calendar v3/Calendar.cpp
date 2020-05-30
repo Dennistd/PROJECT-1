@@ -411,4 +411,9 @@ std::istream& operator>>(std::istream& is,Calendar& c){
 //    }
 //}
 
-
+void Calendar:: print()const{
+    std::cout<<"CALENDAR :" <<std::endl;
+    for(int i=0;i<GetSize();i++){
+        calendar[i].PrintDaily();
+    }
+}

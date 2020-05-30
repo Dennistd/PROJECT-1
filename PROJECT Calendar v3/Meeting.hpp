@@ -38,7 +38,7 @@ public:
     
     Meeting();
     Meeting(const char* name,const char* note,const Time& start,const Time& finish);
-    Meeting(const char* name,const char* note,int StartHours,int StartMinutes,int StartSeconds,int FinishHours,int FinishMinutes,int FinishSeconds); /
+    Meeting(const char* name,const char* note,int StartHours,int StartMinutes,int StartSeconds,int FinishHours,int FinishMinutes,int FinishSeconds); 
     Meeting(const Meeting& other);
     Meeting& operator=(const Meeting& other);
     ~Meeting();
