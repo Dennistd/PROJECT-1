@@ -21,10 +21,10 @@
 class Meeting{
     
     char* name; //The name of the meeting
-    int lenName;
+    size_t lenName;
     
     char* note; //Additional information about the meeting
-    int lenNote;
+    size_t lenNote;
     
     ///The period in which the meeting will take place
     Time start;
@@ -43,18 +43,19 @@ public:
     Meeting& operator=(const Meeting& other);
     ~Meeting();
     
-    ///  Селектори
+
     const char* GetName()const;
     const char* GetNote()const;
     const Time& GetStart()const;
     const Time& GetFinish()const;
     const Time& GetDuration()const; //finds how long the meeting will continue
     
-    ///Мутатори
+
     void SetName(const char* name);
     void SetNote(const char* note);
     void SetStart(const Time& start);
     void SetFinish(const Time& end);
+    void SetPeriod(const Time& start,const Time& end);
     
     bool IsValid(); //checks if the end is not before the start of the meeting
     Time& GetDur()const;

@@ -18,8 +18,9 @@ void Meeting:: CopyFrom(const Meeting& other){
     this->SetNote(other.note);
     // this->lenNote=strlen(other.note);
     
-    this->SetStart(other.start);
-    this->SetFinish(other.finish);
+//    this->SetStart(other.start);
+//    this->SetFinish(other.finish);
+    SetPeriod(other.start, other.finish);
 }
 Meeting:: Meeting() :start(),finish(){
     const char* def="Unknown";
@@ -36,8 +37,7 @@ Meeting:: Meeting(const char* name,const char* note,const Time& start,const Time
         this->SetName(name);
         this->lenNote=strlen(note);
         this->SetNote(note);
-        this->SetStart(start);
-        this->SetFinish(finish);
+        SetPeriod(start,finish);
         
         //IsInit=true;
     }
@@ -111,7 +111,7 @@ void Meeting:: SetStart(const Time& start){
         this->start=start;
     }
     else{
-        throw "Enter a valid start time, before the end";
+        std::cout<< "Enter a valid start time, before the end";
     }
 }
 void Meeting:: SetFinish(const Time& end){
@@ -119,8 +119,17 @@ void Meeting:: SetFinish(const Time& end){
         this->finish=end;
     }
     else{
-        throw "Enter a valid end time, after the start";
+        std::cout<< "Enter a valid end time, after the start";
     }
+}
+
+void Meeting:: SetPeriod(const Time& start,const Time& end){
+    if(start>end){
+        throw "Enter a valid perios";
+    }
+    
+    this->start=start;
+    this->finish=end;
 }
 
 void Meeting:: printMeeting()const{
@@ -155,9 +164,10 @@ std::istream& operator>>(std::istream& is,Meeting& meet){
     Time newFinish;
     
     is>>newStart;
-    meet.SetStart(newStart);
+   // meet.SetStart(newStart);
     is>>newFinish;
-    meet.SetFinish(newFinish);
+   // meet.SetFinish(newFinish);
+    meet.SetPeriod(newStart, newFinish);
     
     char buffName[1024];
     char buffNote[1024];

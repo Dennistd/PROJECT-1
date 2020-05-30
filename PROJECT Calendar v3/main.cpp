@@ -17,13 +17,18 @@ int main(int argc, const char * argv[]) {
     
     Date today(2020,3,13,true);
     Date tomorrow(2020,6,12);
+    today.printDate();
+    tomorrow.printDate();
     
-    Meeting work("Working","Hard",9,30,0,14,30,0);
+    Meeting work("Work", "So much work", 11, 0, 0, 12, 0, 0);
     tomorrow.addMeeting(work);
-    today.addMeeting("Finish the project", "It is due today", 20, 0, 0, 21, 0, 0);
-    personalCal.addDate(today);
-    personalCal.addDate(tomorrow);
-    personalCal.print();
+   // today.addMeeting("Finish the project", "It is due today", 20, 0, 0, 21, 0, 0);
+    
+  //  today.PrintDaily();
+    //tomorrow.PrintDaily();
+   // personalCal.addDate(today);
+  //  personalCal.addDate(tomorrow);
+    //personalCal.print();
 
   //  FileManager f("Output.txt",personalCal);
    

@@ -242,8 +242,8 @@ bool Date:: addMeeting(const Meeting& meeting){
     for(int i=0;i<size;i++){
     
         if(schedule[i].hasConflict(meeting)){
-            throw "You can't add this meeting because its time conflicts with the time of another!";
-            
+            std::cout<< "You can't add this meeting because its time conflicts with the time of another!";
+            return false;
         }
         
     }
@@ -300,7 +300,8 @@ void Date:: removeMeeting(const Meeting& meet){
     PopBack();
 }
 
-void swapDate(Date& a,Date& b){ //разменя дадените дати
+///A swap function for the date objects
+void swapDate(Date& a,Date& b){
     Date temp=a;
     a=b;
     b=temp;
@@ -323,7 +324,7 @@ void Date:: SetDate(int year, int month, int day){
 }
 
 
-bool contains(const char* str,const char* ptr){ //проверява дали е подниз
+bool contains(const char* str,const char* ptr){ //checks if it is a substring
     
     return strstr(str,ptr) != nullptr;
 }
@@ -348,25 +349,6 @@ bool Date:: hasSpace(const Time& needed){
     return false;
 }
 
-//int Date:: ConflictIndex(const Meeting& other){
-//    for(int i=0;i<size;i++){
-//        if(schedule[i].hasConflict(other)){
-//            return i;
-//        }
-//    }
-//    return -1;
-//}
-
-//void Date:: mergeSchedules(const Date& other){
-//    for(int i=0;i<other.GetSize();i++){
-//        if((ConflictIndex(other.GetMeetingAt(i))==-1)&&GetIsWorkday()){
-//             addMeeting(other.GetMeetingAt(i));
-//        }
-//        // else do something else
-//        //rearrange
-//        //int conf=ConflictIndex(other.GetMeetingAt(i));
-//    }
-//}
 
 void Date:: printDate()const{
 

@@ -20,9 +20,11 @@
 ///Links the data of a calendar with the data in a file
 class FileManager{
     
-    char* fileName; //This is the name and path for the working file
-    int len;
-    Calendar calendar; //Object of type calendar whith which the file will work
+    ///This is the name and path for the working file
+    char* fileName;
+    size_t len;
+    ///Object of type calendar whith which the file will work
+    Calendar calendar;
     
     
     void Copyfrom(const FileManager& other);

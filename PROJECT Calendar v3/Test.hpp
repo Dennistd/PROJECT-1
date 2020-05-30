@@ -22,7 +22,7 @@ const int COMMAND_MAX_SIZE=30;
 /// Applies the given command to the calendar
 class Test{
     char* command; //user command
-    int len;
+    size_t len;
     
     Calendar c;
     

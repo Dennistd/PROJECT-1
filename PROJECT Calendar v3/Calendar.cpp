@@ -350,66 +350,7 @@ std::istream& operator>>(std::istream& is,Calendar& c){
     return is;
 }
 
-//void rearrange(Meeting& calM,Meeting& fileM,Calendar& cal,Calendar& file, Date& calD, Date& fileD){
-//    std::cout<<"Chose which meeting to be kept or replaced"<<std::endl;
-//    char command[10];
-//    std::cin>>command;
-//    if(strcmp(command,"keep")==0){
-//
-//        std::cout<<"Enter new date and new time for the meeting: "<<std::endl;
-//
-//        int newYear;
-//        std::cin>>newYear;
-//        int newMonth;
-//         std::cin>>newMonth;
-//        int newDay;
-//         std::cin>>newDay;
-//
-//        Time newStart=timeInit();
-//        Time duration=fileM.GetDur();
-//        Time newFinish= newStart+duration;
-//
-//        int index= file.GetDateIndex(fileD);
-//        int newIndex=file.GetDateIndex(newYear, newMonth, newDay);
-//        Meeting newMeet=fileM;
-//        newMeet.SetStart(newStart);
-//        newMeet.SetFinish(newFinish);
-//
-//
-//        file.at(index).removeMeeting(fileM.GetStart(), fileM.GetFinish());
-//        cal.at(index).addMeeting(fileM);
-//        file.at(newIndex).addMeeting(newMeet);
-//
-//    }
-//    if(strcmp(command,"replace")==0){
-//
-//        std::cout<<"Enter new date and new time for the meeting: "<<std::endl;
-//
-//            int newYear;
-//                   std::cin>>newYear;
-//                   int newMonth;
-//                    std::cin>>newMonth;
-//                   int newDay;
-//                    std::cin>>newDay;
-//
-//        Time newStart=timeInit();
-//        Time duration=calM.GetDur();
-//        Time newFinish=newStart+duration;
-//
-//        int index= cal.GetDateIndex(calD);
-//        int newIndex=cal.GetDateIndex(newYear, newMonth, newDay);
-//
-//        Meeting newMeet=calM;
-//        newMeet.SetStart(newStart);
-//        newMeet.SetFinish(newFinish);
-//
-//        cal.at(index).removeMeeting(calM.GetStart(), calM.GetFinish());
-//        file.at(index).addMeeting(calM);
-//        cal.at(newIndex).addMeeting(newMeet);
-//
-//
-//    }
-//}
+
 
 void Calendar:: print()const{
     std::cout<<"CALENDAR :" <<std::endl;

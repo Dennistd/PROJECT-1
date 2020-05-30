@@ -28,7 +28,7 @@ class Date{
     
     bool IsWorkday; //describes if it is a workday, and can support meetings
     
-   //array of meetings which the given date carries
+   ///array of meetings which the given date carries
     Meeting* schedule;
     int size; //it is described by its size which is the currend number of meetings
     int capacity; //and the maximum number whish it can carry
@@ -38,7 +38,7 @@ class Date{
     
     void Resize(); //function that doubles the capacity
     
-    //functions to find an index
+    ///functions to find an index
     int getMeetingIndex(const Time& start,const Time& end);
     int getMeetingIndex(int startHours, int startMin, int startSec, int endHours, int endMin, int endSec);
     int  getMeetingIndex(const Meeting& meet);

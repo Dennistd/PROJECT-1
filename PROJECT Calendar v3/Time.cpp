@@ -13,16 +13,25 @@ void Time:: SetHours(int hours){
     if(hours>=0 && hours<=23){
         this->hours=hours;
     }
+    else{
+        std::cout<<"Enter valid hours"<<std::endl;
+    }
 }
 void Time:: SetMinutes(int minutes){
     if(minutes>=0 && minutes<=59){
         this->minutes=minutes;
     }
+    else{
+           std::cout<<"Enter valid minutes"<<std::endl;
+       }
 }
 void Time:: SetSeconds(int seconds){
     if(seconds>=0 && seconds<=59){
         this->seconds=seconds;
     }
+    else{
+           std::cout<<"Enter valid seconds"<<std::endl;
+       }
 }
 Time:: Time(int hours,int minutes,int seconds){
     this->SetHours(hours);
@@ -44,12 +53,15 @@ int Time::GetSeconds()const{
 bool operator< (const Time& lhs,const Time& rhs){
     
     
-    if(lhs.GetHours()<rhs.GetHours())
+    if(lhs.GetHours()<rhs.GetHours()){
         return true;
+    }
     else if(lhs.GetHours()==rhs.GetHours()){
         
-        if(lhs.GetMinutes()<rhs.GetMinutes())
-            return true;
+        if(lhs.GetMinutes()<rhs.GetMinutes()){
+             return true;
+        }
+           
         
         else if(lhs.GetMinutes()==rhs.GetMinutes()){
             
@@ -172,7 +184,7 @@ void Time:: printTime()const{
     
 }
 
-///Функция за въвеждане на време от конзолата
+///Function for initialising time from the console
 Time timeInit(){
     int hours;
     std::cin>>hours;
@@ -184,9 +196,4 @@ Time timeInit(){
     return res;
 }
 
-//bool operator>=( Time& lhs, Time& rhs){
-//    return lhs>rhs || lhs==rhs;
-//}
-//bool operator<=(Time& lhs,Time& rhs){
-//    return lhs>rhs || lhs==rhs;
-//}
+
