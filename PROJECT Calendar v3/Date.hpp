@@ -15,40 +15,40 @@
 #include "Meeting.hpp"
 const int DEFAULT_SIZE=8;
 
-///Клас за днесвна заетосе
+///Class for daily obligations
 ///
-///Описва дата, съпровождащите я събития, ако е работна
+///Describes the date in yyyy:mm:dd format and its supporting meetings
 
 class Date{
-    ///Член данни във формата (годинна : месец : ден)
+    
     int year;
     int month;
     int day;
     
     
-    bool IsWorkday; //променлива която отразява дали датата е работна
+    bool IsWorkday; //describes if it is a workday, and can support meetings
     
-    //масив от срещите на датата
+   //array of meetings which the given date carries
     Meeting* schedule;
-    int size; //описват го размер и капацитет
-    int capacity;
+    int size; //it is described by its size which is the currend number of meetings
+    int capacity; //and the maximum number whish it can carry
     
     void CopyFrom(const Date& other);
     void Free();
     
-    void Resize(); //Функция за разширение на масива от срещи
+    void Resize(); //function that doubles the capacity
     
-    //Връща индекса на срещата в масива
+    //functions to find an index
     int getMeetingIndex(const Time& start,const Time& end);
     int getMeetingIndex(int startHours, int startMin, int startSec, int endHours, int endMin, int endSec);
     int  getMeetingIndex(const Meeting& meet);
 
-    bool IsLeapYear(); //прверява дали годината е високосна
+    bool IsLeapYear();
     
     
 public:
-    Date(); //коструктор по подразбиране
-    Date(int,int,int,bool); //конструктор с бълева променлива
+    Date();
+    Date(int,int,int,bool);
     Date(int,int,int);
     
     
@@ -56,57 +56,57 @@ public:
     Date& operator=(const Date& other);
     ~Date();
     
-    void makeHoliday(); //Датата се обяввява за неработна
+    void makeHoliday(); //the date is set to not be a workday
     
-    // Мутатори за промяна на датата
+   
     void SetYear(int year);
     void SetMonth(int month);
     void SetDay(int day);
     void SetDate(int, int, int);
     
-    //Селектори
+ 
     int GetYear()const;
     int GetMonth()const;
     int GetDay()const;
     bool GetIsWorkday()const;
     int GetSize()const;
-    Meeting GetMeetingAt(int index)const; //връща стещата на дадена позиция
+    Meeting GetMeetingAt(int index)const; //returns the meeting on a given position
     
-    Meeting PopBack(); //връща срещата на последна позиция
+    Meeting PopBack(); //returns the meeting on the last position
 
-    ///Функции за добавяне на срещи, приемащи параметри от различен тип
+    ///Functions for adding a new meeting to the array
     bool addMeeting(const char* name,const char* note, int startHours, int startMin, int startSec, int endHours, int endMin, int endSec);
     bool addMeeting(const char* name,const char* note, Time start,Time end);
     bool addMeeting(const Meeting& meeting);
     
-    ///Функции за премахване на среща
+    ///Functions for removing a meeting from the daily array
     void removeMeeting(Time start,Time end);
     void removeMeeting(int startHours, int startMin, int startSec, int endHours, int endMin, int endSec);
     void removeMeeting(const Meeting& meet);
     
-    //сортировка на масива от срещи по време
+    //sort the array by its start time
     void sortByTime();
     
     
-    Meeting GetMeeting(const Time& start); //намира среща с опеределено начално време
+    Meeting GetMeeting(const Time& start); //finds the meeting with given start time
     bool Isvalid()const;
     
     bool IsFree(const Time& start);
-    bool searchFor(const char* ptr); //Търси низ в описанието или името на срещите
-    Time& busyness(); //намира натовареността, като сбор от работни часове
+    bool searchFor(const char* ptr); //looks for a substring in the name or describtion
+    Time& busyness(); //find the bussyness, in the form of a sum
     bool hasSpace(const Time& needed);
     bool hasConflict(Date& other);
  
     
 
-    void sortByBusyness(); //сортировака по натовареност
+    void sortByBusyness(); //sort by bussyness
     void printDate()const; //fix 0s
     
-    ///Оператори за сравнение
+    ///Operator for comparison
     friend bool operator>(const Date& lhs,const Date& rhs);
     friend bool operator<(const Date& lhs,const Date& rhs);
     friend bool operator==(const Date& lhs,const Date& rhs);
-    //Оператори за работа на дата с файл
+    ///Operators for working with a file
     friend std::ostream& operator<<(std::ostream& os,const Date& date);
     friend std::istream& operator>>(std::istream& is,Date& date);
     

@@ -15,19 +15,20 @@
 #include "Time.hpp"
 #endif /* Meeting_hpp */
 
-/// Клас за среща
+/// Class for meeting
 ///
-///Дневният ни календар ще работи със тези събития
+///The daily calendar will be working with these meetings
 class Meeting{
     
-    char* name; //Име на срещата
+    char* name; //The name of the meeting
     int lenName;
     
-    char* note; //Коментар към срещата
+    char* note; //Additional information about the meeting
     int lenNote;
     
-    Time start; //назално време
-    Time finish;//крайно време
+    ///The period in which the meeting will take place
+    Time start;
+    Time finish;
     
     
     void Free();
@@ -35,9 +36,9 @@ class Meeting{
     
 public:
     
-    Meeting(); //Конструктор по подразбиране
-    Meeting(const char* name,const char* note,const Time& start,const Time& finish); //конструктор с параметри обекти от тип Време
-    Meeting(const char* name,const char* note,int StartHours,int StartMinutes,int StartSeconds,int FinishHours,int FinishMinutes,int FinishSeconds); // конструктор с основни типове
+    Meeting();
+    Meeting(const char* name,const char* note,const Time& start,const Time& finish);
+    Meeting(const char* name,const char* note,int StartHours,int StartMinutes,int StartSeconds,int FinishHours,int FinishMinutes,int FinishSeconds); /
     Meeting(const Meeting& other);
     Meeting& operator=(const Meeting& other);
     ~Meeting();
@@ -47,7 +48,7 @@ public:
     const char* GetNote()const;
     const Time& GetStart()const;
     const Time& GetFinish()const;
-    const Time& GetDuration()const; //Функция за намиране продължителността на срещата
+    const Time& GetDuration()const; //finds how long the meeting will continue
     
     ///Мутатори
     void SetName(const char* name);
@@ -55,17 +56,17 @@ public:
     void SetStart(const Time& start);
     void SetFinish(const Time& end);
     
-    bool IsValid(); //проверява дали срещата е валидна
+    bool IsValid(); //checks if the end is not before the start of the meeting
     Time& GetDur()const;
-    bool hasConflict(const Meeting& other); //Проверява дали часът на дадената среща не се пресича с друга
+    bool hasConflict(const Meeting& other); //checks if the period of the given meeting does not cross with another one
     
     
-    void printMeeting()const; //Функция за отпечатане на Среща върху конзолата
+    void printMeeting()const; //Prints the meeting with additional stylisation
     
-    /// Оператори за работа на срещата с файл
+    /// Operators for working with a file
     friend std::ostream& operator<<(std::ostream& os,const Meeting& meet);
     friend std::istream& operator>>(std::ostream& is, Meeting& meet);
-    ///Оператор, който проверява дали срещите са идентични
+    ///Operator which checks if the meetings are identical
     friend bool operator==(const Meeting& lhs,const Meeting& rhs);
 };
 

@@ -53,13 +53,13 @@ public:
     friend bool operator>(const Time& lhs,const Time& rhs);
     friend bool operator<(const Time& lhs,const Time& rhs);
     
-    ///Оператори за събиране и изваждане на часове
+    ///Operators for addition and subtraction
     friend Time&  operator-(const Time& lhs,const Time& rhs);
     friend Time&  operator+(const Time& lhs,const Time& rhs);
     
 };
 
-Time timeInit();
+Time timeInit(); //initialises an objest from the console
  bool operator>=(const Time& lhs,const Time& rhs);
  bool operator<=(const Time& lhs,const Time& rhs);
 #endif /* Time_hpp */

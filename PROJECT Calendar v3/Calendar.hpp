@@ -14,9 +14,9 @@
 //#include "Date.cpp"
 #include "Date.hpp"
 
-/// Основния ни клас каледндар
+/// The calendar manager
 ///
-/// представлява масив от дати
+/// in the form of an array of dates
 class Calendar{
     Date* calendar;
     int size;
@@ -39,21 +39,21 @@ public:
     void InssrtAt(int index, Date& date);
     void RemoveAt(int index);
     
-    int GetDateIndex(const Date& date); //намира индекс по дадена дата
+    int GetDateIndex(const Date& date); //returns the index of a given date
     int GetDateIndex(int year,int month,int day);
-    Date at(int index)const; //дата на позиция
-    int GetSize()const; //намира размера
+    Date at(int index)const; //date on the given position
+    int GetSize()const;
     
     
-    void addDate(int,int,int, bool); //добавя дата към календара
+    void addDate(int,int,int, bool); //adds a date to the calendar
     void addDate(Date& date);
-    Date PopBack(); //връща дата на последна позиция
+    Date PopBack(); //returns the date on last position
     
-    void book(const Date& date,const Meeting& meet); //добавя нова среща към датата
-    void unbook(const Date& date,const Time& start,const Time& finish); //премахва срещата по дадени часове
-    void agenda(const Date& date); // печата хронологичен списък
+    void book(const Date& date,const Meeting& meet); //adds a new meeting to the given date if it is possible
+    void unbook(const Date& date,const Time& start,const Time& finish); //removes the meeting with the given period
+    void agenda(const Date& date); // prints a list in chronological order
     
-    /// Променя избран компонент от среща
+    /// Chenges a different component of the meeting on a given date
     void changeStart(Date& date, Time& start,const Time& newstart);
     void changeDate(Date& date, Time& start,const Date& newdate);
     void changeFinish(Date& date, Time& start,const Time& newEnd);
@@ -61,18 +61,18 @@ public:
     void changeNote(Date& date, Time& start,const char* newNote);
     
     
-    bool find(const char* ptr); //търси подниз
+    bool find(const char* ptr); //looks for a substring
    // void holiday(const Date& date);
         
     
     void busydays(const Date& from,const Date& to); 
-    Date findslot(const Date& date,const Time& duration)const; //намира свободно място за среща
+    Date findslot(const Date& date,const Time& duration)const; //finds a free space for a meeting with given duration
   
     Date findslotwith(const Date& date,const Time& duration,const Calendar& other)const;
     
     
     void merge (const Calendar& other);
-   // void rearrange(Meeting& lhs,Meeting& rhs);
+
     
     friend std::ostream& operator<<(std::ostream& os,Calendar& c);
     friend std::istream& operator>>(std::istream& is,Calendar& c);

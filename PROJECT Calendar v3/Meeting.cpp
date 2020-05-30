@@ -183,21 +183,3 @@ const Time& Meeting:: GetDuration()const{
     return GetFinish()-GetStart();
 }
 
-//void rearrenge(Meeting& lhs,Meeting& rhs){
-//    std::cout<<"Chose which meeting to be kept or replaced"<<std::endl;
-//    char command[10];
-//    std::cin>>command;
-//    if(strcmp(command,"keep")==0){
-//
-//        std::cout<<"Do you want to change the date or the time"<<std::endl;
-//        char command2[5];
-//           std::cin>>command2;
-//        if(strcmp(command2,"date")==0){
-//            std::cout<<"Enter a new date: "<<std::endl;
-//            int newYear;
-//            int newMonth;
-//            int newDay;
-//
-//        }
-//    }
-//}

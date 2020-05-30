@@ -15,14 +15,14 @@
 //#include<fstream>
 #include"Calendar.hpp"
 
-///Клас отговарящ за работа с файлове
+///Class File Manager
 ///
-///Той представялява връзката ни с фаила и се грижи единствено за него, без да се интересъва от информацията 
+///Links the data of a calendar with the data in a file
 class FileManager{
     
-    char* fileName; //Пазим името на файла
+    char* fileName; //This is the name and path for the working file
     int len;
-    Calendar calendar; //Обект от тип клас с който да боравим
+    Calendar calendar; //Object of type calendar whith which the file will work
     
     
     void Copyfrom(const FileManager& other);
@@ -34,11 +34,11 @@ public:
     FileManager& operator=(const FileManager& other);
     ~FileManager();
     
-    void SetFileName(const char* name); //задава името на работния файл
+    void SetFileName(const char* name); //sets the name of the working file
     
-    void read(); //отваря файла и чете от него, като инициализира календара
-    void write(); //записва настоящия календар във файла
-    void writeTo(const char* other); //записва настоящия календар във файл със зададено име
+    void read(); //opens the file, reads from it and initialises the calendar
+    void write(); //saves the current calendar in the file
+    void writeTo(const char* other); //saves the current calendar in a file with the given name and path
     
 };
 

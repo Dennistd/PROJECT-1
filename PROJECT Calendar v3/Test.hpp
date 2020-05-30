@@ -16,15 +16,15 @@
 const int LENGTH=1024;
 const int COMMAND_MAX_SIZE=30;
 
-///Клас който приема информация от потребилтеля  (потребителски интерфейс)
+///Class which accepta command from the user via console (user interface)
 ///
-///  Работи с потребителски вход от конзолата или с потребителски файл
-/// Отговаря за изпълнението на командите свързани с календара или с файла
+///  Works with a file given by the user and its input
+/// Applies the given command to the calendar
 class Test{
-    char* command; //потребителска команда
+    char* command; //user command
     int len;
     
-    Calendar c; //обект от тип календар
+    Calendar c;
     
     void CopyFrom(const Test& other);
     void Free();
@@ -37,8 +37,8 @@ public:
     Test& operator=(const Test& other);
     ~Test();
     
-    void Command(); //изпълнява подадена команда за календара
-    void FileCommand(); //изпълнява подадена команда за файла
+    void Command(); //does the given command for the calendar
+    void FileCommand(); //does the given command for the file
     
 };
 
