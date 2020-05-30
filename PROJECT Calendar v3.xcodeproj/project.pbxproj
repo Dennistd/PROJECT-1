@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16794A672472D2AA00A6A3F8 /* FileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16794A652472D2AA00A6A3F8 /* FileManager.cpp */; };
+		16794A6A2472DC6C00A6A3F8 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16794A682472DC6C00A6A3F8 /* Test.cpp */; };
 		16931AC3246F08BB009396D9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16931AC2246F08BB009396D9 /* main.cpp */; };
+		16931ACB246F08D2009396D9 /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16931AC9246F08D2009396D9 /* Time.cpp */; };
+		16931ACE246F08FA009396D9 /* Meeting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16931ACC246F08FA009396D9 /* Meeting.cpp */; };
+		16931AD1246F090B009396D9 /* Date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16931ACF246F090B009396D9 /* Date.cpp */; };
+		16931AD4246F0923009396D9 /* Calendar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16931AD2246F0923009396D9 /* Calendar.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +29,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		16794A652472D2AA00A6A3F8 /* FileManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileManager.cpp; sourceTree = "<group>"; };
+		16794A662472D2AA00A6A3F8 /* FileManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileManager.hpp; sourceTree = "<group>"; };
+		16794A682472DC6C00A6A3F8 /* Test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		16794A692472DC6C00A6A3F8 /* Test.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
 		16931ABF246F08BB009396D9 /* PROJECT Calendar v3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "PROJECT Calendar v3"; sourceTree = BUILT_PRODUCTS_DIR; };
-		16931AC2246F08BB009396D9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		16931AC2246F08BB009396D9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "PROJECT Calendar v3/main.cpp"; sourceTree = SOURCE_ROOT; };
+		16931AC9246F08D2009396D9 /* Time.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
+		16931ACA246F08D2009396D9 /* Time.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Time.hpp; sourceTree = "<group>"; };
+		16931ACC246F08FA009396D9 /* Meeting.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Meeting.cpp; sourceTree = "<group>"; };
+		16931ACD246F08FA009396D9 /* Meeting.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Meeting.hpp; sourceTree = "<group>"; };
+		16931ACF246F090B009396D9 /* Date.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Date.cpp; sourceTree = "<group>"; };
+		16931AD0246F090B009396D9 /* Date.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Date.hpp; sourceTree = "<group>"; };
+		16931AD2246F0923009396D9 /* Calendar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Calendar.cpp; sourceTree = "<group>"; };
+		16931AD3246F0923009396D9 /* Calendar.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Calendar.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +75,18 @@
 		16931AC1246F08BB009396D9 /* PROJECT Calendar v3 */ = {
 			isa = PBXGroup;
 			children = (
+				16931AC9246F08D2009396D9 /* Time.cpp */,
+				16931ACA246F08D2009396D9 /* Time.hpp */,
+				16931ACC246F08FA009396D9 /* Meeting.cpp */,
+				16931ACD246F08FA009396D9 /* Meeting.hpp */,
+				16931ACF246F090B009396D9 /* Date.cpp */,
+				16931AD0246F090B009396D9 /* Date.hpp */,
+				16931AD2246F0923009396D9 /* Calendar.cpp */,
+				16931AD3246F0923009396D9 /* Calendar.hpp */,
+				16794A652472D2AA00A6A3F8 /* FileManager.cpp */,
+				16794A662472D2AA00A6A3F8 /* FileManager.hpp */,
+				16794A682472DC6C00A6A3F8 /* Test.cpp */,
+				16794A692472DC6C00A6A3F8 /* Test.hpp */,
 				16931AC2246F08BB009396D9 /* main.cpp */,
 			);
 			path = "PROJECT Calendar v3";
@@ -119,7 +149,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16931ACE246F08FA009396D9 /* Meeting.cpp in Sources */,
+				16931ACB246F08D2009396D9 /* Time.cpp in Sources */,
+				16794A6A2472DC6C00A6A3F8 /* Test.cpp in Sources */,
 				16931AC3246F08BB009396D9 /* main.cpp in Sources */,
+				16794A672472D2AA00A6A3F8 /* FileManager.cpp in Sources */,
+				16931AD4246F0923009396D9 /* Calendar.cpp in Sources */,
+				16931AD1246F090B009396D9 /* Date.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
