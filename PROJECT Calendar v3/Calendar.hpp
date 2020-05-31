@@ -63,17 +63,17 @@ public:
     
     
     bool find(const char* ptr); //looks for a substring
-
-        
+    
+    
     
     void busydays(const Date& from,const Date& to); 
     Date findslot(const Date& date,const Time& duration)const; //finds a free space for a meeting with given duration
-  
+    
     Date findslotwith(const Date& date,const Time& duration,const Calendar& other)const;
     
     
     void merge (const Calendar& other);
-
+    
     
     friend std::ostream& operator<<(std::ostream& os,Calendar& c);
     friend std::istream& operator>>(std::istream& is,Calendar& c);

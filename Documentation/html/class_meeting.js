@@ -5,7 +5,6 @@ var class_meeting =
     [ "Meeting", "class_meeting.html#ad43ebf2b068e3bf3541f3048afe8f866", null ],
     [ "Meeting", "class_meeting.html#a25d1c68626937ed29905f75fa0e1c6ff", null ],
     [ "~Meeting", "class_meeting.html#aee544738c7584331ceed39e6bc1a9a1a", null ],
-    [ "GetDur", "class_meeting.html#aa00061b1e53576a71529cabb1109ceb2", null ],
     [ "GetDuration", "class_meeting.html#ae542e634545ed649311f1713565703d0", null ],
     [ "GetFinish", "class_meeting.html#ae94d51dd7039238ab81d039959162139", null ],
     [ "GetName", "class_meeting.html#a42753c9be88a754b70ab1ddb468fbf64", null ],

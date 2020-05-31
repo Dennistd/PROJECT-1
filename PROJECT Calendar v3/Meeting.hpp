@@ -41,14 +41,14 @@ public:
     Meeting& operator=(const Meeting& other);
     ~Meeting();
     
-
+    
     const char* GetName()const;
     const char* GetNote()const;
     const Time& GetStart()const;
     const Time& GetFinish()const;
     const Time& GetDuration()const; //finds how long the meeting will continue
     
-
+    
     void SetName(const char* name);
     void SetNote(const char* note);
     void SetStart(const Time& start);

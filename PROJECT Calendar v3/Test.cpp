@@ -135,7 +135,6 @@ void Test:: Command(){
         Date date =c.at(index);
         
         c.agenda(date);
-        //also fix this cuz it is a mess
     }
     
     else if(strcmp(command,"change")==0){
@@ -150,7 +149,6 @@ void Test:: Command(){
         std::cin>>day;
         
         int index=c.GetDateIndex(year, month, day);
-        //if != -1
         Date date =c.at(index);
         
         std::cout<<"Enter the startting time"<<std::endl;
@@ -178,7 +176,6 @@ void Test:: Command(){
             std::cout<<"Enter your new start time"<<std::endl;
             Time newstart=timeInit();
             c.changeStart(date, start, newstart);
-            //chek if correct
         }
         
         else if(strcmp(option,"endtime")==0){
@@ -241,12 +238,12 @@ void Test:: Command(){
         std::cin>>dayS;
         
         std::cout<<"Enter a ending date"<<std::endl;
-              int yearE;
-              int monthE;
-              int dayE;
-              std::cin>>yearE;
-              std::cin>>monthE;
-              std::cin>>dayE;
+        int yearE;
+        int monthE;
+        int dayE;
+        std::cin>>yearE;
+        std::cin>>monthE;
+        std::cin>>dayE;
         
         Date start(yearS,monthS,dayS,false);
         Date end(yearE,monthE,dayE,false);
@@ -254,12 +251,12 @@ void Test:: Command(){
     }
     else if(strcmp(command,"findslot")==0){
         std::cout<<"Enter a starting date"<<std::endl;
-               int year;
-               int month;
-               int day;
-               std::cin>>year;
-               std::cin>>month;
-               std::cin>>day;
+        int year;
+        int month;
+        int day;
+        std::cin>>year;
+        std::cin>>month;
+        std::cin>>day;
         Date date(year,month,day,false);
         
         std::cout<<"Enter the lenth of your meeting"<<std::endl;
@@ -276,28 +273,28 @@ void Test:: Command(){
         f.read();
         
         std::cout<<"Enter a starting date"<<std::endl;
-                 int year;
-                 int month;
-                 int day;
-                 std::cin>>year;
-                 std::cin>>month;
-                 std::cin>>day;
-          Date date(year,month,day,false);
-          
-          std::cout<<"Enter the lenth of your meeting"<<std::endl;
-          Time dur=timeInit();
+        int year;
+        int month;
+        int day;
+        std::cin>>year;
+        std::cin>>month;
+        std::cin>>day;
+        Date date(year,month,day,false);
+        
+        std::cout<<"Enter the lenth of your meeting"<<std::endl;
+        Time dur=timeInit();
         
         c.findslotwith(date, dur, newC);
         
     }
     else if(strcmp(command,"merge")==0){
         std::cout<<"Enter the name of your file and its path: "<<std::endl;
-               char fileName[LENGTH];
-               std::cin>>fileName;
-               
-               Calendar newC;
-               FileManager f(fileName,newC);
-               f.read();
+        char fileName[LENGTH];
+        std::cin>>fileName;
+        
+        Calendar newC;
+        FileManager f(fileName,newC);
+        f.read();
         
         c.merge(newC);
     }
@@ -324,7 +321,7 @@ void Test:: FileCommand(){
             char innerCommand[COMMAND_MAX_SIZE];
             std::cin>>innerCommand;
             
-           
+            
             SetCommand(innerCommand);
             while((strcmp(innerCommand, "save")==0)&&(strcmp(innerCommand, "saveas")==0)&&(strcmp(innerCommand, "close")==0)){
                 

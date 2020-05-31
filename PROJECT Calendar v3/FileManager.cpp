@@ -16,7 +16,7 @@ void FileManager:: Free(){
     delete [] fileName;
 }
 
-    
+
 
 FileManager:: FileManager(const FileManager& other){
     Copyfrom(other);
@@ -64,7 +64,7 @@ void FileManager:: write(){
     
     if(oFile.fail()){
         std::cout<<"Error while opening this file"<<std::endl;
-               return;
+        return;
     }
     
     oFile<<this->calendar;

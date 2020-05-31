@@ -22,16 +22,16 @@ void Time:: SetMinutes(int minutes){
         this->minutes=minutes;
     }
     else{
-           std::cout<<"Enter valid minutes"<<std::endl;
-       }
+        std::cout<<"Enter valid minutes"<<std::endl;
+    }
 }
 void Time:: SetSeconds(int seconds){
     if(seconds>=0 && seconds<=59){
         this->seconds=seconds;
     }
     else{
-           std::cout<<"Enter valid seconds"<<std::endl;
-       }
+        std::cout<<"Enter valid seconds"<<std::endl;
+    }
 }
 Time:: Time(int hours,int minutes,int seconds){
     this->SetHours(hours);
@@ -59,9 +59,9 @@ bool operator< (const Time& lhs,const Time& rhs){
     else if(lhs.GetHours()==rhs.GetHours()){
         
         if(lhs.GetMinutes()<rhs.GetMinutes()){
-             return true;
+            return true;
         }
-           
+        
         
         else if(lhs.GetMinutes()==rhs.GetMinutes()){
             
@@ -113,7 +113,7 @@ Time& Time:: operator-=(const Time& other){
 }
 Time&  operator-(const Time& lhs,const Time& rhs){
     Time copy(lhs);
-   return  copy-=rhs;
+    return  copy-=rhs;
 }
 
 Time& Time:: operator+=(const Time& other){
@@ -135,7 +135,7 @@ Time& Time:: operator+=(const Time& other){
 
 Time& operator+(const Time& lhs,const Time& rhs){
     Time copy(lhs);
-   return  copy+=rhs;
+    return  copy+=rhs;
     
 }
 bool operator==(const Time& lhs,const Time& rhs){

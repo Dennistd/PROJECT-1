@@ -12,9 +12,9 @@ void Date::CopyFrom(const Date& other){
     SetYear(other.year);
     SetMonth(other.month);
     SetDay(other.day);
-       
+    
     this->IsWorkday=other.IsWorkday;
-       
+    
     this->size=other.size;
     this->capacity=other.capacity;
     schedule=new Meeting[other.capacity];
@@ -22,11 +22,11 @@ void Date::CopyFrom(const Date& other){
         
         schedule[i]=other.schedule[i];
     }
-       
-       
+    
+    
 }
 void Date:: Free(){
-
+    
     delete [] this->schedule;
 }
 
@@ -67,13 +67,13 @@ void Date::SetDay(int day){
     if(this->month==4 || this->month==6 || this->month==9 ||this->month==11){
         if(day>=1 && day<=30){
             this->day=day;
-           }
+        }
         else{
             throw "This month does not have 31 days";
         }
     }
-
-   else if(month==2){
+    
+    else if(month==2){
         if(IsLeapYear()){
             if(day>=1&&day<=29){
                 this->day=day;
@@ -82,23 +82,23 @@ void Date::SetDay(int day){
         if(day>=1&&day<=28){
             this->day=day;
         }
-       throw "Invalid date for February";
+        throw "Invalid date for February";
     }
-   else{
-       if(day>=1 && day<=31){
-           this->day=day;
-       }
-       else{
-           throw "Invalid day";
-       }
-   }
+    else{
+        if(day>=1 && day<=31){
+            this->day=day;
+        }
+        else{
+            throw "Invalid day";
+        }
+    }
 }
 void Date:: SetYear(int year){
     if(year>=1970){
         this->year=year;
     }
     else{
-    throw "Enter a valid year";
+        throw "Enter a valid year";
     }
 }
 
@@ -127,15 +127,15 @@ Date::Date(){
 Date::Date(int year,int month,int day,bool IsWorkday){
     
     SetDay(day);
-           SetMonth(month);
-           SetYear(year);
+    SetMonth(month);
+    SetYear(year);
     this->IsWorkday=IsWorkday;
     
     if(IsWorkday){
         
         
-    size=0;
-    capacity=DEFAULT_SIZE;
+        size=0;
+        capacity=DEFAULT_SIZE;
         this->schedule=new Meeting[capacity];
     }
     else{
@@ -242,7 +242,7 @@ Meeting Date:: PopBack(){
 
 bool Date:: addMeeting(const Meeting& meeting){
     for(int i=0;i<size;i++){
-    
+        
         if(this->schedule[i].hasConflict(meeting)){
             std::cout<< "You can't add this meeting because its time conflicts with the time of another!";
             return false;
@@ -250,7 +250,7 @@ bool Date:: addMeeting(const Meeting& meeting){
     }
     
     if(IsWorkday){
-       this->schedule[size]=meeting;
+        this->schedule[size]=meeting;
         this->size++;
         return true;
     }
@@ -308,14 +308,14 @@ void swapDate(Date& a,Date& b){
     b=temp;
 }
 
- Meeting Date:: GetMeeting(const Time& start){
-     for(int i=0;i<size;i++){
-         if(schedule[i].GetStart()==start){
-             return schedule[i];
-         }
-     }
-     return Meeting();
- }
+Meeting Date:: GetMeeting(const Time& start){
+    for(int i=0;i<size;i++){
+        if(schedule[i].GetStart()==start){
+            return schedule[i];
+        }
+    }
+    return Meeting();
+}
 
 
 void Date:: SetDate(int year, int month, int day){
@@ -337,7 +337,7 @@ bool Date:: searchFor(const char* ptr){
             return true;
         }
     }
-     return false;
+    return false;
 }
 
 bool Date:: hasSpace(const Time& needed){
@@ -352,17 +352,17 @@ bool Date:: hasSpace(const Time& needed){
 
 
 void Date:: printDate()const{
-
+    
     std::cout<<GetYear()<<" : ";
     if(GetMonth()<10){
         std::cout<<0<<GetMonth()<<" : ";
     }
     else{
-    std::cout<<month<<" : ";
+        std::cout<<month<<" : ";
     }
     if(GetDay()<10){
-           std::cout<<0<<GetDay();
-       }
+        std::cout<<0<<GetDay();
+    }
     else{
         std::cout<<GetDay();
     }
@@ -378,18 +378,18 @@ void Date:: PrintDaily()const{
 }
 bool operator>(const Date& lhs,const Date& rhs){
     if(lhs.GetYear()>rhs.GetYear())
-           return true;
-       else if(lhs.GetYear()==rhs.GetYear()){
-           
-           if(lhs.GetMonth()>rhs.GetMonth())
-               return true;
-           else if(lhs.GetMonth()==rhs.GetMonth()){
-               
-               if(lhs.GetDay()>rhs.GetDay())
-                   return true;
-           }
-       }
-       return false;
+        return true;
+    else if(lhs.GetYear()==rhs.GetYear()){
+        
+        if(lhs.GetMonth()>rhs.GetMonth())
+            return true;
+        else if(lhs.GetMonth()==rhs.GetMonth()){
+            
+            if(lhs.GetDay()>rhs.GetDay())
+                return true;
+        }
+    }
+    return false;
 }
 bool operator<(const Date& lhs,const Date& rhs){
     if(lhs.GetYear()<rhs.GetYear())
@@ -448,7 +448,7 @@ std::istream& operator>>(std::istream& is,Date& date){
         }
     }
     return is;
-   
+    
 }
 
 

@@ -5,6 +5,10 @@
 The calendar manager.  
 
 
+
+
+{\ttfamily \#include $<$Calendar.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,11 +24,13 @@ void \mbox{\hyperlink{class_calendar_a28da4800a04627e1b8bec484b452fe88}{Inssrt\+
 \item 
 void \mbox{\hyperlink{class_calendar_ac425d6fbb63cc673b92feb81c423d462}{Remove\+At}} (int index)
 \item 
-int \mbox{\hyperlink{class_calendar_a383f4577c43dcd26c428a9f5bd9bd48f}{Get\+Date\+Index}} (const \mbox{\hyperlink{class_date}{Date}} \&date)
+int \mbox{\hyperlink{class_calendar_a6d10ef35d59c008f3aa372539ab8781a}{Get\+Date\+Index}} (const \mbox{\hyperlink{class_date}{Date}} \&date) const
 \item 
 int \mbox{\hyperlink{class_calendar_a79f760cbd809a95f34b2ee70eb459a77}{Get\+Date\+Index}} (int year, int month, int day)
 \item 
 \mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_calendar_a5c4270d6a86d53bd32c7d674a1006b17}{at}} (int index) const
+\item 
+\mbox{\hyperlink{class_date}{Date}} \& \mbox{\hyperlink{class_calendar_ae1bed9dc905bc79359d5ebcd9c73dd76}{at}} (int index)
 \item 
 int \mbox{\hyperlink{class_calendar_a68bc273e8b77e97fd3e1dbef0307d436}{Get\+Size}} () const
 \item 
@@ -116,10 +122,16 @@ in the form of an array of dates
 \doxysubsubsection{\texorpdfstring{agenda()}{agenda()}}
 {\footnotesize\ttfamily void Calendar\+::agenda (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{class_calendar_ae1bed9dc905bc79359d5ebcd9c73dd76}\label{class_calendar_ae1bed9dc905bc79359d5ebcd9c73dd76}} 
+\index{Calendar@{Calendar}!at@{at}}
+\index{at@{at}!Calendar@{Calendar}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} \& Calendar\+::at (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_calendar_a5c4270d6a86d53bd32c7d674a1006b17}\label{class_calendar_a5c4270d6a86d53bd32c7d674a1006b17}} 
 \index{Calendar@{Calendar}!at@{at}}
 \index{at@{at}!Calendar@{Calendar}}
-\doxysubsubsection{\texorpdfstring{at()}{at()}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Calendar\+::at (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{class_calendar_ad4505540c7b0b888e1e23f57691b104f}\label{class_calendar_ad4505540c7b0b888e1e23f57691b104f}} 
@@ -186,11 +198,11 @@ Chenges a different component of the meeting on a given date.
 \doxysubsubsection{\texorpdfstring{findslotwith()}{findslotwith()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Calendar\+::findslotwith (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date,  }\item[{const \mbox{\hyperlink{class_time}{Time}} \&}]{duration,  }\item[{const \mbox{\hyperlink{class_calendar}{Calendar}} \&}]{other }\end{DoxyParamCaption}) const}
 
-\mbox{\Hypertarget{class_calendar_a383f4577c43dcd26c428a9f5bd9bd48f}\label{class_calendar_a383f4577c43dcd26c428a9f5bd9bd48f}} 
+\mbox{\Hypertarget{class_calendar_a6d10ef35d59c008f3aa372539ab8781a}\label{class_calendar_a6d10ef35d59c008f3aa372539ab8781a}} 
 \index{Calendar@{Calendar}!GetDateIndex@{GetDateIndex}}
 \index{GetDateIndex@{GetDateIndex}!Calendar@{Calendar}}
 \doxysubsubsection{\texorpdfstring{GetDateIndex()}{GetDateIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily int Calendar\+::\+Get\+Date\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int Calendar\+::\+Get\+Date\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{class_calendar_a79f760cbd809a95f34b2ee70eb459a77}\label{class_calendar_a79f760cbd809a95f34b2ee70eb459a77}} 
 \index{Calendar@{Calendar}!GetDateIndex@{GetDateIndex}}
@@ -261,9 +273,3 @@ Chenges a different component of the meeting on a given date.
 \doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
 {\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_calendar}{Calendar}} \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
-\item 
-/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\mbox{\hyperlink{_calendar_8hpp}{Calendar.\+hpp}}\item 
-/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\mbox{\hyperlink{_calendar_8cpp}{Calendar.\+cpp}}\end{DoxyCompactItemize}

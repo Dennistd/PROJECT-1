@@ -103,6 +103,8 @@ $(document).ready(function(){initNavTree('class_calendar.html',''); initResizabl
 
 <p>The calendar manager.  
  <a href="class_calendar.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_calendar_8hpp_source.html">Calendar.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -118,12 +120,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a28da4800a04627e1b8bec484b452fe88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac425d6fbb63cc673b92feb81c423d462"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calendar.html#ac425d6fbb63cc673b92feb81c423d462">RemoveAt</a> (int index)</td></tr>
 <tr class="separator:ac425d6fbb63cc673b92feb81c423d462"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a383f4577c43dcd26c428a9f5bd9bd48f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calendar.html#a383f4577c43dcd26c428a9f5bd9bd48f">GetDateIndex</a> (const <a class="el" href="class_date.html">Date</a> &amp;date)</td></tr>
-<tr class="separator:a383f4577c43dcd26c428a9f5bd9bd48f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d10ef35d59c008f3aa372539ab8781a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calendar.html#a6d10ef35d59c008f3aa372539ab8781a">GetDateIndex</a> (const <a class="el" href="class_date.html">Date</a> &amp;date) const</td></tr>
+<tr class="separator:a6d10ef35d59c008f3aa372539ab8781a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79f760cbd809a95f34b2ee70eb459a77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calendar.html#a79f760cbd809a95f34b2ee70eb459a77">GetDateIndex</a> (int year, int month, int day)</td></tr>
 <tr class="separator:a79f760cbd809a95f34b2ee70eb459a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c4270d6a86d53bd32c7d674a1006b17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calendar.html#a5c4270d6a86d53bd32c7d674a1006b17">at</a> (int index) const</td></tr>
 <tr class="separator:a5c4270d6a86d53bd32c7d674a1006b17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1bed9dc905bc79359d5ebcd9c73dd76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_date.html">Date</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calendar.html#ae1bed9dc905bc79359d5ebcd9c73dd76">at</a> (int index)</td></tr>
+<tr class="separator:ae1bed9dc905bc79359d5ebcd9c73dd76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68bc273e8b77e97fd3e1dbef0307d436"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calendar.html#a68bc273e8b77e97fd3e1dbef0307d436">GetSize</a> () const</td></tr>
 <tr class="separator:a68bc273e8b77e97fd3e1dbef0307d436"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc30c1e30da0d03f6bab1f27b7530e0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_calendar.html#afc30c1e30da0d03f6bab1f27b7530e0b">addDate</a> (int, int, int, bool)</td></tr>
@@ -302,8 +306,26 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="ae1bed9dc905bc79359d5ebcd9c73dd76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1bed9dc905bc79359d5ebcd9c73dd76">&#9670;&nbsp;</a></span>at() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_date.html">Date</a> &amp; Calendar::at </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5c4270d6a86d53bd32c7d674a1006b17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c4270d6a86d53bd32c7d674a1006b17">&#9670;&nbsp;</a></span>at()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c4270d6a86d53bd32c7d674a1006b17">&#9670;&nbsp;</a></span>at() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -628,8 +650,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a383f4577c43dcd26c428a9f5bd9bd48f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a383f4577c43dcd26c428a9f5bd9bd48f">&#9670;&nbsp;</a></span>GetDateIndex() <span class="overload">[1/2]</span></h2>
+<a id="a6d10ef35d59c008f3aa372539ab8781a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d10ef35d59c008f3aa372539ab8781a">&#9670;&nbsp;</a></span>GetDateIndex() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -639,7 +661,7 @@ Friends</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_date.html">Date</a> &amp;&#160;</td>
           <td class="paramname"><em>date</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -920,10 +942,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/dennisdimitrov/Desktop/PROJECT Calendar v3/PROJECT Calendar v3/<a class="el" href="_calendar_8hpp_source.html">Calendar.hpp</a></li>
-<li>/Users/dennisdimitrov/Desktop/PROJECT Calendar v3/PROJECT Calendar v3/<a class="el" href="_calendar_8cpp.html">Calendar.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

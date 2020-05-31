@@ -11,7 +11,7 @@
 int main() {
     Calendar personalCal;
     
-    std::cout<<"Enter a command for your file manager: "<<std::endl;
+    std::cout<<"Enter a command for your calendar manager: "<<std::endl;
     char command[COMMAND_MAX_SIZE];
     std::cin>>command;
     

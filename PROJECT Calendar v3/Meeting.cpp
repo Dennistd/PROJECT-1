@@ -151,13 +151,13 @@ bool operator==(const Meeting& lhs,const Meeting& rhs){
 
 
 std::istream& operator>>(std::istream& is,Meeting& meet){
-
+    
     
     Time newStart;
     Time newFinish;
     
     is>>newStart;
-
+    
     is>>newFinish;
     meet.SetPeriod(newStart, newFinish);
     

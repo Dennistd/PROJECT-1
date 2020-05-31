@@ -204,7 +204,6 @@ void Calendar:: merge (const Calendar& other){
     
     for(int i=0;i<other.GetSize();i++){
         if(calendar[i]==other.at(i)){
-            //calendar[i].mergeSchedules(other.at(i));
             
             for(int j=0;j<other.at(i).GetSize();j++){
                 if(!at(i).GetMeetingAt(j).hasConflict(other.at(i).GetMeetingAt(j))){

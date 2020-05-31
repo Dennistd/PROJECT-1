@@ -27,7 +27,7 @@ class Date{
     
     bool IsWorkday; //describes if it is a workday, and can support meetings
     
-   ///array of meetings which the given date carries
+    ///array of meetings which the given date carries
     Meeting* schedule;
     int size; //it is described by its size which is the currend number of meetings
     int capacity; //and the maximum number whish it can carry
@@ -41,7 +41,7 @@ class Date{
     int getMeetingIndex(const Time& start,const Time& end);
     int getMeetingIndex(int startHours, int startMin, int startSec, int endHours, int endMin, int endSec);
     int  getMeetingIndex(const Meeting& meet);
-
+    
     bool IsLeapYear();
     
     
@@ -57,13 +57,13 @@ public:
     
     void makeHoliday(); //the date is set to not be a workday
     
-   
+    
     void SetYear(int year);
     void SetMonth(int month);
     void SetDay(int day);
     void SetDate(int, int, int);
     
- 
+    
     int GetYear()const;
     int GetMonth()const;
     int GetDay()const;
@@ -71,7 +71,7 @@ public:
     int GetSize()const;
     Meeting GetMeetingAt(int index)const; //returns the meeting on a given position
     Meeting PopBack(); //returns the meeting on the last position
-
+    
     ///Functions for adding a new meeting to the array
     bool addMeeting(const char* name,const char* note, int startHours, int startMin, int startSec, int endHours, int endMin, int endSec);
     bool addMeeting(const char* name,const char* note, Time start,Time end);
@@ -94,9 +94,9 @@ public:
     Time& busyness(); //find the bussyness, in the form of a sum
     bool hasSpace(const Time& needed);
     bool hasConflict(Date& other);
- 
     
-
+    
+    
     void sortByBusyness(); //sort by bussyness
     void printDate()const; //fix 0s
     void PrintDaily()const;

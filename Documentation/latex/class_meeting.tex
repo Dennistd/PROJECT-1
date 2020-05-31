@@ -5,6 +5,10 @@
 Class for meeting.  
 
 
+
+
+{\ttfamily \#include $<$Meeting.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,8 +45,6 @@ void \mbox{\hyperlink{class_meeting_a37a3753d64bfdd3b46aecb5a63c4db9e}{Set\+Fini
 void \mbox{\hyperlink{class_meeting_a274b751dad3b359163c8f4ac0bf92da2}{Set\+Period}} (const \mbox{\hyperlink{class_time}{Time}} \&start, const \mbox{\hyperlink{class_time}{Time}} \&end)
 \item 
 bool \mbox{\hyperlink{class_meeting_a560a22394c19d9ce14eab8782b1bfc9e}{Is\+Valid}} ()
-\item 
-\mbox{\hyperlink{class_time}{Time}} \& \mbox{\hyperlink{class_meeting_aa00061b1e53576a71529cabb1109ceb2}{Get\+Dur}} () const
 \item 
 bool \mbox{\hyperlink{class_meeting_aad82bfb7f87506fa68694214cb2d5f04}{has\+Conflict}} (const \mbox{\hyperlink{class_meeting}{Meeting}} \&other)
 \item 
@@ -98,12 +100,6 @@ The daily calendar will be working with these meetings
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_meeting_aa00061b1e53576a71529cabb1109ceb2}\label{class_meeting_aa00061b1e53576a71529cabb1109ceb2}} 
-\index{Meeting@{Meeting}!GetDur@{GetDur}}
-\index{GetDur@{GetDur}!Meeting@{Meeting}}
-\doxysubsubsection{\texorpdfstring{GetDur()}{GetDur()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_time}{Time}} \& Meeting\+::\+Get\+Dur (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
-
 \mbox{\Hypertarget{class_meeting_ae542e634545ed649311f1713565703d0}\label{class_meeting_ae542e634545ed649311f1713565703d0}} 
 \index{Meeting@{Meeting}!GetDuration@{GetDuration}}
 \index{GetDuration@{GetDuration}!Meeting@{Meeting}}
@@ -217,9 +213,3 @@ Operator which checks if the meetings are identical.
 \doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
 {\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{is,  }\item[{\mbox{\hyperlink{class_meeting}{Meeting}} \&}]{meet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
-\item 
-/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\mbox{\hyperlink{_meeting_8hpp}{Meeting.\+hpp}}\item 
-/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\+P\+R\+O\+J\+E\+C\+T Calendar v3/\mbox{\hyperlink{_meeting_8cpp}{Meeting.\+cpp}}\end{DoxyCompactItemize}

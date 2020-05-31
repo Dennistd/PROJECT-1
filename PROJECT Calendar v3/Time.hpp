@@ -33,7 +33,7 @@ public:
     void SetMinutes(int);
     void SetSeconds(int);
     
-   
+    
     int GetHours()const;
     int GetMinutes()const;
     int GetSeconds()const;
@@ -60,6 +60,6 @@ public:
 };
 
 Time timeInit(); //initialises an objest from the console
- bool operator>=(const Time& lhs,const Time& rhs);
- bool operator<=(const Time& lhs,const Time& rhs);
+bool operator>=(const Time& lhs,const Time& rhs);
+bool operator<=(const Time& lhs,const Time& rhs);
 #endif /* Time_hpp */
