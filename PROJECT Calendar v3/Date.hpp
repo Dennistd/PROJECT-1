@@ -10,8 +10,7 @@
 #ifndef Date_hpp
 #define Date_hpp
 
-//#include <stdio.h>
-//#include "Meeting.cpp"
+#include <stdio.h>
 #include "Meeting.hpp"
 const int DEFAULT_SIZE=8;
 
@@ -71,7 +70,6 @@ public:
     bool GetIsWorkday()const;
     int GetSize()const;
     Meeting GetMeetingAt(int index)const; //returns the meeting on a given position
-    
     Meeting PopBack(); //returns the meeting on the last position
 
     ///Functions for adding a new meeting to the array

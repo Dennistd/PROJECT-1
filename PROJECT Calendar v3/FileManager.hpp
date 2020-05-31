@@ -9,10 +9,7 @@
 #ifndef FileManager_hpp
 #define FileManager_hpp
 
-//#include <stdio.h>
-
-//#include"Calendar.cpp"
-//#include<fstream>
+#include <stdio.h>
 #include"Calendar.hpp"
 
 ///Class File Manager
@@ -43,5 +40,6 @@ public:
     void writeTo(const char* other); //saves the current calendar in a file with the given name and path
     
 };
+//By default the IO files are put in the Build folder
 
 #endif /* FileManager_hpp */

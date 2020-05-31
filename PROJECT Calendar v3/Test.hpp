@@ -11,7 +11,6 @@
 #define Test_hpp
 
 #include <stdio.h>
-//#include "FileManager.cpp"
 #include "FileManager.hpp"
 const int LENGTH=1024;
 const int COMMAND_MAX_SIZE=30;

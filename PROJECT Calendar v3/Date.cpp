@@ -44,7 +44,7 @@ void Date::SetMonth(int month){
         this->month=month;
     }
     else{
-        std::cout<<"Enter a valid month number"<<std::endl;
+        throw "Enter a valid month number";
     }
 }
 bool Date:: IsLeapYear(){
@@ -82,7 +82,7 @@ void Date::SetDay(int day){
         if(day>=1&&day<=28){
             this->day=day;
         }
-        std::cout<<"Invalid date for February"<<std::endl;
+       throw "Invalid date for February";
     }
    else{
        if(day>=1 && day<=31){
@@ -98,7 +98,7 @@ void Date:: SetYear(int year){
         this->year=year;
     }
     else{
-    std::cout<<"Enter a valid year"<<std::endl;
+    throw "Enter a valid year";
     }
 }
 
@@ -121,6 +121,8 @@ Date::Date(){
     size=0;
     capacity=DEFAULT_SIZE;
     schedule=new Meeting[capacity];
+    
+    IsWorkday=true;
 }
 Date::Date(int year,int month,int day,bool IsWorkday){
     
@@ -223,7 +225,7 @@ void Date:: sortByTime(){
 
 void Date:: sortByBusyness(){
     for(int i=0;i<size;i++){
-        if(schedule[i].GetDur()<schedule[i+1].GetDur())
+        if(schedule[i].GetDuration()<schedule[i+1].GetDuration())
             swapMeet(schedule[i],schedule[i+1]);
     }
 }
@@ -241,11 +243,10 @@ Meeting Date:: PopBack(){
 bool Date:: addMeeting(const Meeting& meeting){
     for(int i=0;i<size;i++){
     
-        if(schedule[i].hasConflict(meeting)){
+        if(this->schedule[i].hasConflict(meeting)){
             std::cout<< "You can't add this meeting because its time conflicts with the time of another!";
             return false;
         }
-        
     }
     
     if(IsWorkday){

@@ -14,12 +14,7 @@ void Meeting:: Free(){
 }
 void Meeting:: CopyFrom(const Meeting& other){
     this->SetName(other.name);
-    // this->lenName=strlen(other.name);
     this->SetNote(other.note);
-    // this->lenNote=strlen(other.note);
-    
-//    this->SetStart(other.start);
-//    this->SetFinish(other.finish);
     SetPeriod(other.start, other.finish);
 }
 Meeting:: Meeting() :start(),finish(){
@@ -29,7 +24,6 @@ Meeting:: Meeting() :start(),finish(){
     SetName(def);
     SetNote(def);
     
-    //IsInit=false;
 }
 Meeting:: Meeting(const char* name,const char* note,const Time& start,const Time& finish){
     if(IsValid()){
@@ -39,7 +33,6 @@ Meeting:: Meeting(const char* name,const char* note,const Time& start,const Time
         this->SetNote(note);
         SetPeriod(start,finish);
         
-        //IsInit=true;
     }
     this->lenName=strlen(name);
     this->SetName(name);
@@ -111,7 +104,7 @@ void Meeting:: SetStart(const Time& start){
         this->start=start;
     }
     else{
-        std::cout<< "Enter a valid start time, before the end";
+        throw "Enter a valid start time, before the end";
     }
 }
 void Meeting:: SetFinish(const Time& end){
@@ -119,13 +112,13 @@ void Meeting:: SetFinish(const Time& end){
         this->finish=end;
     }
     else{
-        std::cout<< "Enter a valid end time, after the start";
+        throw "Enter a valid end time, after the start";
     }
 }
 
 void Meeting:: SetPeriod(const Time& start,const Time& end){
     if(start>end){
-        throw "Enter a valid perios";
+        throw "Enter a valid period";
     }
     
     this->start=start;
@@ -148,25 +141,24 @@ void swapMeet(Meeting& a,Meeting& b){
     a=b;
     b=temp;
 }
-Time& Meeting:: GetDur()const{
+const Time& Meeting:: GetDuration()const{
     return GetStart()-GetFinish();
 }
 
 bool operator==(const Meeting& lhs,const Meeting& rhs){
-    return (strcmp(lhs.GetName(),rhs.GetName())==0)&&(strcmp(lhs.GetNote(),rhs.GetNote())==0)&&lhs.GetStart()==rhs.GetStart()&&lhs.GetFinish()==rhs.GetFinish();
+    return (strcmp(lhs.GetName(),rhs.GetName())==0)&&(strcmp(lhs.GetNote(),rhs.GetNote())==0)&&lhs.GetStart()==rhs.GetStart()&& lhs.GetFinish()==rhs.GetFinish();
 }
 
 
 std::istream& operator>>(std::istream& is,Meeting& meet){
-    //fix
+
     
     Time newStart;
     Time newFinish;
     
     is>>newStart;
-   // meet.SetStart(newStart);
+
     is>>newFinish;
-   // meet.SetFinish(newFinish);
     meet.SetPeriod(newStart, newFinish);
     
     char buffName[1024];
@@ -190,7 +182,5 @@ bool Meeting:: hasConflict(const Meeting& other){
 }
 
 
-const Time& Meeting:: GetDuration()const{
-    return GetFinish()-GetStart();
-}
+
 

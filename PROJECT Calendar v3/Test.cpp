@@ -8,16 +8,6 @@
 
 #include "Test.hpp"
 
-//Time timeInit(){
-//    int hours; // check
-//    std::cin>>hours;
-//    int minutes;
-//    std::cin>>minutes;
-//    int seconds;
-//    std::cin>>seconds;
-//    Time res(hours,minutes,seconds); //check if its valid
-//    return res;
-//}
 void Test:: CopyFrom(const Test& other){
     this->c=other.c;
     SetCommand(other.command);

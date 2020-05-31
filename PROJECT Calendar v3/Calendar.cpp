@@ -14,7 +14,6 @@ void Calendar:: CopyFrom(const Calendar& other){
     
     this->calendar=new Date[other.capacity];
     for(int i=0;i<other.size;i++){
-      
         calendar[i]=other.calendar[i];
     }
 }
@@ -47,6 +46,9 @@ int Calendar:: getIndex(const Date& date)const{
     }
     return -1;
 }
+int Calendar:: GetDateIndex(const Date& date)const{ //we don't actally need this function its just an additio 
+    return getIndex(date);
+}
 
 int Calendar::GetDateIndex(int year,int month,int day){
     for(int i=0;i<size;i++){
@@ -56,11 +58,6 @@ int Calendar::GetDateIndex(int year,int month,int day){
     }
     return -1;
 }
-int Calendar::GetDateIndex(const Date& date){ //this function can be removed
-    return getIndex(date);
-}
-
-
 
 Date Calendar:: at(int index)const{
     if(index>=0&&index<size){
@@ -68,7 +65,9 @@ Date Calendar:: at(int index)const{
     }
     return Date();
 }
-
+Date& Calendar:: at(int index){
+    return calendar[index];
+}
 
 Calendar:: Calendar(){
     size=0;
@@ -231,7 +230,7 @@ void Calendar:: merge (const Calendar& other){
                     std::cin>>newDay;
                     
                     Time newStart=timeInit();
-                    Time duration=problemOther.GetDur();
+                    Time duration= problemOther.GetDuration();
                     Time newFinish= newStart+duration;
                     
                     Meeting newMeeting=problemOther;
@@ -262,7 +261,7 @@ void Calendar:: merge (const Calendar& other){
                     std::cin>>newDay;
                     
                     Time newStart=timeInit();
-                    Time duration=problemCal.GetDur();
+                    Time duration=problemCal.GetDuration();
                     Time newFinish= newStart+duration;
                     
                     Meeting newMeeting=problemCal;
@@ -278,10 +277,6 @@ void Calendar:: merge (const Calendar& other){
                 std::cout<<"Enter a valid command"<<std::endl;
             }
         }
-        //        if(!other.PopBack().hasConflict()){
-        //           addDate(other.PopBack());
-        //        }
-        //         rearenge
     }
 }
 
@@ -353,7 +348,7 @@ std::istream& operator>>(std::istream& is,Calendar& c){
 
 
 void Calendar:: print()const{
-    std::cout<<"CALENDAR :" <<std::endl;
+    std::cout<<"CALENDAR INFORMATION:" <<std::endl;
     for(int i=0;i<GetSize();i++){
         calendar[i].PrintDaily();
     }

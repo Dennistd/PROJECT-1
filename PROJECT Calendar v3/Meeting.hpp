@@ -11,9 +11,7 @@
 #define Meeting_hpp
 
 #include <stdio.h>
-//#include "Time.cpp"
 #include "Time.hpp"
-#endif /* Meeting_hpp */
 
 /// Class for meeting
 ///
@@ -58,7 +56,6 @@ public:
     void SetPeriod(const Time& start,const Time& end);
     
     bool IsValid(); //checks if the end is not before the start of the meeting
-    Time& GetDur()const;
     bool hasConflict(const Meeting& other); //checks if the period of the given meeting does not cross with another one
     
     
@@ -72,3 +69,5 @@ public:
 };
 
 void swapMeet(Meeting& a,Meeting& b);
+
+#endif /* Meeting_hpp */

@@ -10,8 +10,7 @@
 #ifndef Calendar_hpp
 #define Calendar_hpp
 
-//#include <stdio.h>
-//#include "Date.cpp"
+#include <stdio.h>
 #include "Date.hpp"
 
 /// The calendar manager
@@ -31,6 +30,7 @@ class Calendar{
     
 public:
     
+    //BIG 4
     Calendar();
     Calendar(const Calendar& other);
     Calendar& operator=(const Calendar& calendar);
@@ -39,9 +39,10 @@ public:
     void InssrtAt(int index, Date& date);
     void RemoveAt(int index);
     
-    int GetDateIndex(const Date& date); //returns the index of a given date
+    int GetDateIndex(const Date& date)const; //returns the index of a given date
     int GetDateIndex(int year,int month,int day);
     Date at(int index)const; //date on the given position
+    Date& at(int index);
     int GetSize()const;
     
     
@@ -62,7 +63,7 @@ public:
     
     
     bool find(const char* ptr); //looks for a substring
-   // void holiday(const Date& date);
+
         
     
     void busydays(const Date& from,const Date& to); 
