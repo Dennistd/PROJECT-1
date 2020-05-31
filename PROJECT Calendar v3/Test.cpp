@@ -168,7 +168,7 @@ void Test:: Command(){
             std::cin>>day;
             
             Date newdate(year,month,day,false);
-            //look into it
+    
             c.changeDate(date, start, newdate);
         }
         
